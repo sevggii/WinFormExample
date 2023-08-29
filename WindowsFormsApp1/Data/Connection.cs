@@ -12,7 +12,7 @@ namespace WindowsFormsApp1.Data
         static string server = "127.0.0.1";
         static string database = "policydb";
         static string Uid = "root;";
-        static string password = ";";
+        static string password = "ASHF#183SDfgh;";
 
 
         public static MySqlConnection datasource()
