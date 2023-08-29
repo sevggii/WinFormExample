@@ -132,13 +132,13 @@ namespace WindowsFormsApp1
                 connection.Open();
 
                 string tcNo = txtTC.Text;
-                string dogumTarihi =dateTime_dogumTarihi.Text;
+                string dogumTarihi = txtDt.Text;
                 string plaka = txtPlaka.Text;
                 string belgeNo = txtBelgeNo.Text;
                 string urun = cbUrun.SelectedItem?.ToString();
-                string teklifTarihi = dateTime_teklif.Text;
-                string policeBaslangic = dateTime_policeBaslangic.Text;
-                string policeBitis = dateTime_policeBitis.Text;
+                string teklifTarihi = txtTeklifTarih.Text;
+                string policeBaslangic = txtPoliceBaslangic.Text;
+                string policeBitis = txtPoliceBitis.Text;
                 string onayDurumu = cbOnay.SelectedItem?.ToString();
 
                 string query = "INSERT INTO policycheck (tcNo, dogumTarihi,plaka,belgeNo,urun,teklifTarihi,policeBaslangic,policeBitis,onayDurumu) " +
