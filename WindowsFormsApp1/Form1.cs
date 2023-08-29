@@ -123,7 +123,58 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_plaka_sorgu_Click(object sender, EventArgs e)
+        {
+            LoadDataGridViewDataByPlaka(txt_plaka_sorgu.Text);
+        }
+
+        private void txtDt_TextChanged(object sender, EventArgs e)
+        {
+            string cleanedText = txtDt.Text.Replace("/", "");
+
+          
+            string formattedText = "";
+            for (int i = 0; i < cleanedText.Length; i++)
+            {
+                if (char.IsDigit(cleanedText[i]))
+                {
+                    if (formattedText.Length == 2 || formattedText.Length == 5)
+                    {
+                        formattedText += "/";
+                    }
+                    formattedText += cleanedText[i];
+                }
+            }
+
+            if (formattedText.Length > 11)
+            {
+                formattedText = formattedText.Substring(0, 10);
+            }
+
+            txtDt.Text = formattedText;
+            txtDt.SelectionStart = formattedText.Length; // Move the cursor to end
+
+        }
+
+        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
+        { 
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Sadece sayı girişi yapabilirsiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // blocks character entry
+                e.Handled = true;
+            }
+
+            
+            if (txtTC.Text.Length >= 11 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void btnControl_Click(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
 
@@ -136,7 +187,7 @@ namespace WindowsFormsApp1
                 string plaka = txtPlaka.Text;
                 string belgeNo = txtBelgeNo.Text;
                 string urun = cbUrun.SelectedItem?.ToString();
-                string teklifTarihi = txtTeklifTarih.Text;
+                string teklifTarihi = txtTeklifTarihi.Text;
                 string policeBaslangic = txtPoliceBaslangic.Text;
                 string policeBitis = txtPoliceBitis.Text;
                 string onayDurumu = cbOnay.SelectedItem?.ToString();
@@ -173,20 +224,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btn_plaka_sorgu_Click(object sender, EventArgs e)
+        private void txtTeklifTarihi_TextChanged(object sender, EventArgs e)
         {
-            LoadDataGridViewDataByPlaka(txt_plaka_sorgu.Text);
-        }
+            int cursorPosition = txtTeklifTarihi.SelectionStart;
 
-        private void txtDt_TextChanged(object sender, EventArgs e)
-        {
-            string input = new string(txtDt.Text.Where(char.IsDigit).ToArray());
+            string input = new string(txtTeklifTarihi.Text.Where(char.IsDigit).ToArray());
 
             if (input.Length > 8)
             {
                 input = input.Substring(0, 8);
             }
-
 
             if (input.Length >= 2)
             {
@@ -197,28 +244,30 @@ namespace WindowsFormsApp1
                 input = input.Insert(5, "/");
             }
 
+           
+            if (input.Length == 11)
+            {
+                input = input.Insert(2, "/").Insert(5, ".");
+            }
 
-            txtDt.Text = input;
-            txtDt.SelectionStart = input.Length;
+            txtTeklifTarihi.Text = input;
+            txtTeklifTarihi.SelectionStart = cursorPosition;
         }
 
-        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
-        { 
+        private void txtTeklifTarihi_KeyPress(object sender, KeyPressEventArgs e)
+        {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 MessageBox.Show("Sadece sayı girişi yapabilirsiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                // blocks character entry
                 e.Handled = true;
             }
 
-            
+
             if (txtTC.Text.Length >= 11 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-
         }
-
     }
 }
