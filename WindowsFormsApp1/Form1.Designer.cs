@@ -187,7 +187,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(166, 141);
+            this.dataGridView1.Location = new System.Drawing.Point(228, 141);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(934, 450);
             this.dataGridView1.TabIndex = 19;
@@ -195,7 +195,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1013, 42);
+            this.label10.Location = new System.Drawing.Point(978, 74);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 13);
             this.label10.TabIndex = 20;
@@ -203,14 +203,14 @@
             // 
             // txt_plaka_sorgu
             // 
-            this.txt_plaka_sorgu.Location = new System.Drawing.Point(990, 59);
+            this.txt_plaka_sorgu.Location = new System.Drawing.Point(1019, 71);
             this.txt_plaka_sorgu.Name = "txt_plaka_sorgu";
             this.txt_plaka_sorgu.Size = new System.Drawing.Size(100, 20);
             this.txt_plaka_sorgu.TabIndex = 21;
             // 
             // btn_plaka_sorgu
             // 
-            this.btn_plaka_sorgu.Location = new System.Drawing.Point(1000, 85);
+            this.btn_plaka_sorgu.Location = new System.Drawing.Point(1125, 69);
             this.btn_plaka_sorgu.Name = "btn_plaka_sorgu";
             this.btn_plaka_sorgu.Size = new System.Drawing.Size(75, 23);
             this.btn_plaka_sorgu.TabIndex = 22;
