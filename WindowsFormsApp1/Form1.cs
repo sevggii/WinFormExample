@@ -1,7 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
@@ -14,10 +17,12 @@ namespace WindowsFormsApp1
             InitializeComponent();
             InitializeDataGridViewColumns();
             LoadDataGridViewData();
+        }
 
-           cb_filter.Items.AddRange(new string[] { "Last 7 Days", "Last 10 Days", "Last 30 Days" });
-            cb_filter.SelectedIndex = 0;
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cbUrun.Items.AddRange(new string[] { "Kasko", "Trafik", "Sağlık", "Dask", "Konut", "Yangın", "Diğer" });
+            cbOnay.Items.AddRange(new string[] { "Onaylandı", "Bekliyor", "Onaylanmadı" });
         }
 
         private void InitializeDataGridViewColumns()
@@ -118,59 +123,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void LoadDataGridViewDataByDateRange(DateTime startDate, DateTime endDate)
-        {
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
-                               "FROM policycheck " +
-                               "WHERE teklifTarihi >= @startDate AND teklifTarihi <= @endDate";
-
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@startDate", startDate);
-                command.Parameters.AddWithValue("@endDate", endDate);
-
-                try
-                {
-                    connection.Open();
-                    MySqlDataReader reader = command.ExecuteReader();
-
-                    dataGridView1.Rows.Clear();
-
-                    while (reader.Read())
-                    {
-                        DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(dataGridView1,
-                            reader["tcNo"],
-                            reader["dogumTarihi"],
-                            reader["plaka"],
-                            reader["belgeNo"],
-                            reader["urun"],
-                            reader["teklifTarihi"],
-                            reader["policeBaslangic"],
-                            reader["policeBitis"],
-                            reader["onayDurumu"]
-                        );
-                        dataGridView1.Rows.Add(row);
-                    }
-
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-        }
-
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            cb_urun.Items.AddRange(new string[] { "Kasko", "Trafik", "Sağlık", "Dask", "Konut", "Yangın", "Diğer" });
-            cb_onay.Items.AddRange(new string[] { "Onaylandı", "Bekliyor", "Onaylanmadı" });
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -179,15 +131,15 @@ namespace WindowsFormsApp1
             {
                 connection.Open();
 
-                string tcNo = txt_tc.Text;
+                string tcNo = txtTC.Text;
                 string dogumTarihi =dateTime_dogumTarihi.Text;
-                string plaka = txt_plaka.Text;
-                string belgeNo = txt_belge.Text;
-                string urun = cb_urun.SelectedItem?.ToString();
+                string plaka = txtPlaka.Text;
+                string belgeNo = txtBelgeNo.Text;
+                string urun = cbUrun.SelectedItem?.ToString();
                 string teklifTarihi = dateTime_teklif.Text;
                 string policeBaslangic = dateTime_policeBaslangic.Text;
                 string policeBitis = dateTime_policeBitis.Text;
-                string onayDurumu = cb_onay.SelectedItem?.ToString();
+                string onayDurumu = cbOnay.SelectedItem?.ToString();
 
                 string query = "INSERT INTO policycheck (tcNo, dogumTarihi,plaka,belgeNo,urun,teklifTarihi,policeBaslangic,policeBitis,onayDurumu) " +
                     "VALUES (@tcNo, @dogumTarihi, @plaka, @belgeNo, @urun, @teklifTarihi, @policeBaslangic, @policeBitis, @onayDurumu)";
@@ -226,77 +178,29 @@ namespace WindowsFormsApp1
             LoadDataGridViewDataByPlaka(txt_plaka_sorgu.Text);
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void txtDt_TextChanged(object sender, EventArgs e)
         {
+            string input = new string(txtDt.Text.Where(char.IsDigit).ToArray());
 
-        }
 
-        private void btn_filter_Click(object sender, EventArgs e)
-        {
-            string selectedOption = cb_filter.SelectedItem.ToString();
-            int days;
-
-            switch (selectedOption)
+            if (input.Length > 8)
             {
-                case "Last 7 Days":
-                    days = 7;
-                    break;
-                case "Last 10 Days":
-                    days = 10;
-                    break;
-                case "Last 30 Days":
-                    days = 30;
-                    break;
-                default:
-                    return; // Invalid option, do nothing
+                input = input.Substring(0, 8);
             }
 
-            FilterDataByDays(days);
-        }
 
-        private void FilterDataByDays(int days)
-        {
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            if (input.Length >= 2)
             {
-                string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
-                               "FROM policycheck " +
-                               "WHERE teklifTarihi >= DATE_SUB(NOW(), INTERVAL @days DAY)";
-
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@days", days);
-
-                try
-                {
-                    connection.Open();
-                    MySqlDataReader reader = command.ExecuteReader();
-
-                    dataGridView1.Rows.Clear();
-
-                    while (reader.Read())
-                    {
-                        DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(dataGridView1,
-                            reader["tcNo"],
-                            reader["dogumTarihi"],
-                            reader["plaka"],
-                            reader["belgeNo"],
-                            reader["urun"],
-                            reader["teklifTarihi"],
-                            reader["policeBaslangic"],
-                            reader["policeBitis"],
-                            reader["onayDurumu"]
-                        );
-                        dataGridView1.Rows.Add(row);
-                    }
-
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                input = input.Insert(2, "/");
             }
-        }
+            if (input.Length >= 5)
+            {
+                input = input.Insert(5, "/");
+            }
 
+
+            txtTC.Text = input;
+            txtTC.SelectionStart = input.Length;
+        }
     }
 }
