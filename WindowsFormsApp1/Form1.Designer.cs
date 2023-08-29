@@ -152,6 +152,7 @@
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(140, 20);
             this.txtTC.TabIndex = 10;
+            this.txtTC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTC_KeyPress);
             // 
             // txtPlaka
             // 

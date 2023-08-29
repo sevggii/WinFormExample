@@ -182,7 +182,6 @@ namespace WindowsFormsApp1
         {
             string input = new string(txtDt.Text.Where(char.IsDigit).ToArray());
 
-
             if (input.Length > 8)
             {
                 input = input.Substring(0, 8);
@@ -199,8 +198,27 @@ namespace WindowsFormsApp1
             }
 
 
-            txtTC.Text = input;
-            txtTC.SelectionStart = input.Length;
+            txtDt.Text = input;
+            txtDt.SelectionStart = input.Length;
         }
+
+        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
+        { 
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Sadece sayı girişi yapabilirsiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // blocks character entry
+                e.Handled = true;
+            }
+
+            
+            if (txtTC.Text.Length >= 11 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
     }
 }
