@@ -46,7 +46,7 @@
             this.cbOnay = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_plaka_sorgu = new System.Windows.Forms.TextBox();
+            this.txtPlakaSorgu = new System.Windows.Forms.TextBox();
             this.btnPlakaSorgu = new System.Windows.Forms.Button();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.txtDt = new System.Windows.Forms.TextBox();
@@ -204,13 +204,13 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "PLAKA:";
             // 
-            // txt_plaka_sorgu
+            // txtPlakaSorgu
             // 
-            this.txt_plaka_sorgu.Location = new System.Drawing.Point(1002, 121);
-            this.txt_plaka_sorgu.Name = "txt_plaka_sorgu";
-            this.txt_plaka_sorgu.Size = new System.Drawing.Size(100, 20);
-            this.txt_plaka_sorgu.TabIndex = 21;
-            this.txt_plaka_sorgu.TextChanged += new System.EventHandler(this.txtPlaka_TextChanged);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(1002, 121);
+            this.txtPlakaSorgu.Name = "txtPlakaSorgu";
+            this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
+            this.txtPlakaSorgu.TabIndex = 21;
+            this.txtPlakaSorgu.TextChanged += new System.EventHandler(this.txtPlaka_TextChanged);
             // 
             // btnPlakaSorgu
             // 
@@ -267,7 +267,7 @@
             this.Controls.Add(this.txtTeklifTarihi);
             this.Controls.Add(this.txtDt);
             this.Controls.Add(this.btnPlakaSorgu);
-            this.Controls.Add(this.txt_plaka_sorgu);
+            this.Controls.Add(this.txtPlakaSorgu);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbOnay);
@@ -315,7 +315,7 @@
         private System.Windows.Forms.ComboBox cbOnay;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txt_plaka_sorgu;
+        private System.Windows.Forms.TextBox txtPlakaSorgu;
         private System.Windows.Forms.Button btnPlakaSorgu;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private System.Windows.Forms.TextBox txtDt;

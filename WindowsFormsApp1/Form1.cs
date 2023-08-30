@@ -7,6 +7,8 @@ using System.Numerics;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
@@ -88,42 +90,45 @@ namespace WindowsFormsApp1
         {
             dataGridView1.Rows.Clear();
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            if (plaka.Length > 0) 
             {
-                string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
-                               "FROM policycheck " +
-                               "WHERE plaka LIKE @plaka";
-
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@plaka", "%" + plaka + "%");
-
-                try
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
-                    connection.Open();
-                    MySqlDataReader reader = command.ExecuteReader();
+                    string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
+                                   "FROM policycheck " +
+                                   "WHERE plaka LIKE @plakaFilter";
 
-                    while (reader.Read())
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@plakaFilter", plaka + "%"); 
+
+                    try
                     {
-                        DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(dataGridView1,
-                            reader["tcNo"],
-                            reader["dogumTarihi"],
-                            reader["plaka"],
-                            reader["belgeNo"],
-                            reader["urun"],
-                            reader["teklifTarihi"],
-                            reader["policeBaslangic"],
-                            reader["policeBitis"],
-                            reader["onayDurumu"]
-                        );
-                        dataGridView1.Rows.Add(row);
-                    }
+                        connection.Open();
+                        MySqlDataReader reader = command.ExecuteReader();
 
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
+                        while (reader.Read())
+                        {
+                            DataGridViewRow row = new DataGridViewRow();
+                            row.CreateCells(dataGridView1,
+                                reader["tcNo"],
+                                reader["dogumTarihi"],
+                                reader["plaka"],
+                                reader["belgeNo"],
+                                reader["urun"],
+                                reader["teklifTarihi"],
+                                reader["policeBaslangic"],
+                                reader["policeBitis"],
+                                reader["onayDurumu"]
+                            );
+                            dataGridView1.Rows.Add(row);
+                        }
+
+                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
                 }
             }
         }
@@ -269,13 +274,12 @@ namespace WindowsFormsApp1
 
         private void btnPlakaSorgu_Click(object sender, EventArgs e)
         {
-            LoadDataGridViewDataByPlaka(txt_plaka_sorgu.Text);
+            LoadDataGridViewDataByPlaka(txtPlakaSorgu.Text);
         }
 
         private void txtPlaka_TextChanged(object sender, EventArgs e)
         {
-            string plakaFilter = txtPlaka.Text; 
-            LoadDataGridViewDataByPlaka(plakaFilter);
+            LoadDataGridViewDataByPlaka(txtPlakaSorgu.Text);
         }
 
         private void txtPoliceBaslangic_TextChanged(object sender, EventArgs e)
