@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
 
         private void InitializeDataGridViewColumns()
         {
-            dataGridView1.AutoGenerateColumns = false;
+          /*dataGridView1.AutoGenerateColumns = false;
 
             dataGridView1.Columns.Add("tcNo", "TC No");
             dataGridView1.Columns.Add("dogumTarihi", "Doğum Tarihi");
@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
             dataGridView1.Columns.Add("teklifTarihi", "Teklif Tarihi");
             dataGridView1.Columns.Add("policeBaslangic", "Poliçe Başlangıç");
             dataGridView1.Columns.Add("policeBitis", "Poliçe Bitiş");
-            dataGridView1.Columns.Add("onayDurumu", "Onay Durumu");
+            dataGridView1.Columns.Add("onayDurumu", "Onay Durumu"); */
         }
 
         private void LoadDataGridViewData()
