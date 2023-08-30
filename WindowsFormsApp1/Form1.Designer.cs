@@ -210,6 +210,7 @@
             this.txt_plaka_sorgu.Name = "txt_plaka_sorgu";
             this.txt_plaka_sorgu.Size = new System.Drawing.Size(100, 20);
             this.txt_plaka_sorgu.TabIndex = 21;
+            this.txt_plaka_sorgu.TextChanged += new System.EventHandler(this.txtPlaka_TextChanged);
             // 
             // btnPlakaSorgu
             // 
@@ -245,6 +246,7 @@
             this.txtPoliceBaslangic.Name = "txtPoliceBaslangic";
             this.txtPoliceBaslangic.Size = new System.Drawing.Size(88, 20);
             this.txtPoliceBaslangic.TabIndex = 30;
+            this.txtPoliceBaslangic.TextChanged += new System.EventHandler(this.txtPoliceBaslangic_TextChanged);
             // 
             // txtPoliceBitis
             // 
@@ -252,6 +254,7 @@
             this.txtPoliceBitis.Name = "txtPoliceBitis";
             this.txtPoliceBitis.Size = new System.Drawing.Size(88, 20);
             this.txtPoliceBitis.TabIndex = 31;
+            this.txtPoliceBitis.TextChanged += new System.EventHandler(this.txtPoliceBitis_TextChanged);
             // 
             // Form1
             // 

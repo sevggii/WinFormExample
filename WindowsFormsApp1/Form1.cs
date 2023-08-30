@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -83,21 +84,21 @@ namespace WindowsFormsApp1
 
         private void LoadDataGridViewDataByPlaka(string plaka)
         {
+            dataGridView1.Rows.Clear();
+
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
                                "FROM policycheck " +
-                               "WHERE plaka = @plaka";
+                               "WHERE plaka LIKE @plaka";
 
                 MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@plaka", plaka);
+                command.Parameters.AddWithValue("@plaka", "%" + plaka + "%");
 
                 try
                 {
                     connection.Open();
                     MySqlDataReader reader = command.ExecuteReader();
-
-                    dataGridView1.Rows.Clear();
 
                     while (reader.Read())
                     {
@@ -223,32 +224,29 @@ namespace WindowsFormsApp1
 
         private void txtTeklifTarihi_TextChanged(object sender, EventArgs e)
         {
-            int cursorPosition = txtTeklifTarihi.SelectionStart;
+            string cleanedText = txtTeklifTarihi.Text.Replace("/", "");
 
-            string input = new string(txtTeklifTarihi.Text.Where(char.IsDigit).ToArray());
 
-            if (input.Length > 8)
+            string formattedText = "";
+            for (int i = 0; i < cleanedText.Length; i++)
             {
-                input = input.Substring(0, 8);
+                if (char.IsDigit(cleanedText[i]))
+                {
+                    if (formattedText.Length == 2 || formattedText.Length == 5)
+                    {
+                        formattedText += "/";
+                    }
+                    formattedText += cleanedText[i];
+                }
             }
 
-            if (input.Length >= 2)
+            if (formattedText.Length > 11)
             {
-                input = input.Insert(2, "/");
-            }
-            if (input.Length >= 5)
-            {
-                input = input.Insert(5, "/");
+                formattedText = formattedText.Substring(0, 10);
             }
 
-           
-            if (input.Length == 11)
-            {
-                input = input.Insert(2, "/").Insert(5, ".");
-            }
-
-            txtTeklifTarihi.Text = input;
-            txtTeklifTarihi.SelectionStart = cursorPosition;
+            txtTeklifTarihi.Text = formattedText;
+            txtTeklifTarihi.SelectionStart = formattedText.Length;
         }
 
         private void txtTeklifTarihi_KeyPress(object sender, KeyPressEventArgs e)
@@ -270,6 +268,66 @@ namespace WindowsFormsApp1
         private void btnPlakaSorgu_Click(object sender, EventArgs e)
         {
             LoadDataGridViewDataByPlaka(txt_plaka_sorgu.Text);
+        }
+
+        private void txtPlaka_TextChanged(object sender, EventArgs e)
+        {
+            string plakaFilter = txtPlaka.Text; 
+            LoadDataGridViewDataByPlaka(plakaFilter);
+        }
+
+        private void txtPoliceBaslangic_TextChanged(object sender, EventArgs e)
+        {
+            string cleanedText = txtPoliceBaslangic.Text.Replace("/", "");
+
+
+            string formattedText = "";
+            for (int i = 0; i < cleanedText.Length; i++)
+            {
+                if (char.IsDigit(cleanedText[i]))
+                {
+                    if (formattedText.Length == 2 || formattedText.Length == 5)
+                    {
+                        formattedText += "/";
+                    }
+                    formattedText += cleanedText[i];
+                }
+            }
+
+            if (formattedText.Length > 11)
+            {
+                formattedText = formattedText.Substring(0, 10);
+            }
+
+            txtPoliceBaslangic.Text = formattedText;
+            txtPoliceBaslangic.SelectionStart = formattedText.Length;
+        }
+
+        private void txtPoliceBitis_TextChanged(object sender, EventArgs e)
+        {
+            string cleanedText = txtPoliceBitis.Text.Replace("/", "");
+
+
+            string formattedText = "";
+            for (int i = 0; i < cleanedText.Length; i++)
+            {
+                if (char.IsDigit(cleanedText[i]))
+                {
+                    if (formattedText.Length == 2 || formattedText.Length == 5)
+                    {
+                        formattedText += "/";
+                    }
+                    formattedText += cleanedText[i];
+                }
+            }
+
+            if (formattedText.Length > 11)
+            {
+                formattedText = formattedText.Substring(0, 10);
+            }
+
+            txtPoliceBitis.Text = formattedText;
+            txtPoliceBitis.SelectionStart = formattedText.Length;
         }
     }
 }
