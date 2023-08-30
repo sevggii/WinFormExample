@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
                     while (reader.Read())
                     {
                         DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(dataGridView1,
+                      row.CreateCells(dataGridView1,
                             reader["tcNo"],
                             reader["dogumTarihi"],
                             reader["plaka"],
@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
                             reader["policeBaslangic"],
                             reader["policeBitis"],
                             reader["onayDurumu"]
-                        );
+                        );  
                         dataGridView1.Rows.Add(row);
                     }
 
