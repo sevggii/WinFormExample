@@ -20,10 +20,23 @@ namespace WindowsFormsApp1
             InitializeComponent();
             InitializeDataGridViewColumns();
             LoadDataGridViewData();
+            InitializeDateTimePicker();
 
             //this.WindowState = FormWindowState.Maximized;
             this.StartPosition = FormStartPosition.CenterScreen; 
             this.WindowState = FormWindowState.Normal;
+            
+        }
+
+        private void InitializeDateTimePicker()
+        {
+            dateTime_dtarihi.Format = DateTimePickerFormat.Custom;
+            dateTime_dtarihi.CustomFormat = "dd/MM/yyyy";
+
+            dateTime_teklifTarihi.Format = DateTimePickerFormat.Custom;
+            dateTime_teklifTarihi.CustomFormat = "dd/MM/yyyy";
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -135,7 +148,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void txtDt_TextChanged(object sender, EventArgs e)
+     /* private void txtDt_TextChanged(object sender, EventArgs e)
         {
             string cleanedText = txtDt.Text.Replace("/", "");
 
@@ -161,7 +174,7 @@ namespace WindowsFormsApp1
             txtDt.Text = formattedText;
             txtDt.SelectionStart = formattedText.Length; 
 
-        }
+        }*/
 
         private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
         { 
@@ -190,13 +203,13 @@ namespace WindowsFormsApp1
                 connection.Open();
 
                 string tcNo = txtTC.Text;
-                string dogumTarihi = txtDt.Text;
+                string dogumTarihi = dateTime_dtarihi.Text;
                 string plaka = txtPlaka.Text;
                 string belgeNo = txtBelgeNo.Text;
                 string urun = cbUrun.SelectedItem?.ToString();
-                string teklifTarihi = txtTeklifTarihi.Text;
-                string policeBaslangic = txtPoliceBaslangic.Text;
-                string policeBitis = txtPoliceBitis.Text;
+                string teklifTarihi = dateTime_teklifTarihi.Text;
+                string policeBaslangic = dateTime_policeBaslangic.Text;
+                string policeBitis = dateTime_policeBitis.Text;
                 string onayDurumu = cbOnay.SelectedItem?.ToString();
 
                 string query = "INSERT INTO policycheck (tcNo, dogumTarihi,plaka,belgeNo,urun,teklifTarihi,policeBaslangic,policeBitis,onayDurumu) " +
@@ -231,7 +244,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void txtTeklifTarihi_TextChanged(object sender, EventArgs e)
+      /*private void txtTeklifTarihi_TextChanged(object sender, EventArgs e)
         {
             string cleanedText = txtTeklifTarihi.Text.Replace("/", "");
 
@@ -256,7 +269,7 @@ namespace WindowsFormsApp1
 
             txtTeklifTarihi.Text = formattedText;
             txtTeklifTarihi.SelectionStart = formattedText.Length;
-        }
+        }*/
 
         private void txtTeklifTarihi_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -294,7 +307,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void txtPoliceBaslangic_TextChanged(object sender, EventArgs e)
+     /* private void txtPoliceBaslangic_TextChanged(object sender, EventArgs e)
         {
             string cleanedText = txtPoliceBaslangic.Text.Replace("/", "");
 
@@ -319,9 +332,9 @@ namespace WindowsFormsApp1
 
             txtPoliceBaslangic.Text = formattedText;
             txtPoliceBaslangic.SelectionStart = formattedText.Length;
-        }
+        }*/
 
-        private void txtPoliceBitis_TextChanged(object sender, EventArgs e)
+      /*private void txtPoliceBitis_TextChanged(object sender, EventArgs e)
         {
             string cleanedText = txtPoliceBitis.Text.Replace("/", "");
 
@@ -346,6 +359,6 @@ namespace WindowsFormsApp1
 
             txtPoliceBitis.Text = formattedText;
             txtPoliceBitis.SelectionStart = formattedText.Length;
-        }
+        }*/
     }
 }
