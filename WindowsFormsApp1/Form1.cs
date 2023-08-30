@@ -36,6 +36,12 @@ namespace WindowsFormsApp1
             dateTime_teklifTarihi.Format = DateTimePickerFormat.Custom;
             dateTime_teklifTarihi.CustomFormat = "dd/MM/yyyy";
 
+            dateTime_policeBaslangic.Format = DateTimePickerFormat.Custom;
+            dateTime_policeBaslangic.CustomFormat = "dd/MM/yyyy";
+
+            dateTime_policeBitis.Format = DateTimePickerFormat.Custom;
+            dateTime_policeBitis.CustomFormat = "dd/MM/yyyy";
+
 
         }
 
