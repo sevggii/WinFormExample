@@ -47,7 +47,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_plaka_sorgu = new System.Windows.Forms.TextBox();
-            this.btn_plaka_sorgu = new System.Windows.Forms.Button();
+            this.btnPlakaSorgu = new System.Windows.Forms.Button();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.txtDt = new System.Windows.Forms.TextBox();
             this.txtTeklifTarihi = new System.Windows.Forms.TextBox();
@@ -58,12 +58,13 @@
             // 
             // btnControl
             // 
+            this.btnControl.BackColor = System.Drawing.Color.White;
             this.btnControl.Location = new System.Drawing.Point(818, 135);
             this.btnControl.Name = "btnControl";
             this.btnControl.Size = new System.Drawing.Size(122, 37);
             this.btnControl.TabIndex = 0;
             this.btnControl.Text = "KONTROL";
-            this.btnControl.UseVisualStyleBackColor = true;
+            this.btnControl.UseVisualStyleBackColor = false;
             this.btnControl.Click += new System.EventHandler(this.btnControl_Click);
             // 
             // label1
@@ -187,6 +188,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(189, 195);
             this.dataGridView1.Name = "dataGridView1";
@@ -209,15 +211,16 @@
             this.txt_plaka_sorgu.Size = new System.Drawing.Size(100, 20);
             this.txt_plaka_sorgu.TabIndex = 21;
             // 
-            // btn_plaka_sorgu
+            // btnPlakaSorgu
             // 
-            this.btn_plaka_sorgu.Location = new System.Drawing.Point(1014, 147);
-            this.btn_plaka_sorgu.Name = "btn_plaka_sorgu";
-            this.btn_plaka_sorgu.Size = new System.Drawing.Size(75, 23);
-            this.btn_plaka_sorgu.TabIndex = 22;
-            this.btn_plaka_sorgu.Text = "SORGULA";
-            this.btn_plaka_sorgu.UseVisualStyleBackColor = true;
-            this.btn_plaka_sorgu.Click += new System.EventHandler(this.btn_plaka_sorgu_Click);
+            this.btnPlakaSorgu.BackColor = System.Drawing.Color.White;
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(1014, 147);
+            this.btnPlakaSorgu.Name = "btnPlakaSorgu";
+            this.btnPlakaSorgu.Size = new System.Drawing.Size(75, 23);
+            this.btnPlakaSorgu.TabIndex = 22;
+            this.btnPlakaSorgu.Text = "SORGULA";
+            this.btnPlakaSorgu.UseVisualStyleBackColor = false;
+            this.btnPlakaSorgu.Click += new System.EventHandler(this.btnPlakaSorgu_Click);
             // 
             // txtDt
             // 
@@ -260,7 +263,7 @@
             this.Controls.Add(this.txtPoliceBaslangic);
             this.Controls.Add(this.txtTeklifTarihi);
             this.Controls.Add(this.txtDt);
-            this.Controls.Add(this.btn_plaka_sorgu);
+            this.Controls.Add(this.btnPlakaSorgu);
             this.Controls.Add(this.txt_plaka_sorgu);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridView1);
@@ -310,7 +313,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_plaka_sorgu;
-        private System.Windows.Forms.Button btn_plaka_sorgu;
+        private System.Windows.Forms.Button btnPlakaSorgu;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private System.Windows.Forms.TextBox txtDt;
         private System.Windows.Forms.TextBox txtTeklifTarihi;

@@ -125,11 +125,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btn_plaka_sorgu_Click(object sender, EventArgs e)
-        {
-            LoadDataGridViewDataByPlaka(txt_plaka_sorgu.Text);
-        }
-
         private void txtDt_TextChanged(object sender, EventArgs e)
         {
             string cleanedText = txtDt.Text.Replace("/", "");
@@ -270,6 +265,11 @@ namespace WindowsFormsApp1
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnPlakaSorgu_Click(object sender, EventArgs e)
+        {
+            LoadDataGridViewDataByPlaka(txt_plaka_sorgu.Text);
         }
     }
 }
