@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         {
             cbUrun.Items.AddRange(new string[] { "Kasko", "Trafik", "Sağlık", "Dask", "Konut", "Yangın", "Diğer" });
             cbOnay.Items.AddRange(new string[] { "Onaylandı", "Bekliyor", "Onaylanmadı" });
+
         }
 
         private void InitializeDataGridViewColumns()
