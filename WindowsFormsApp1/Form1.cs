@@ -19,7 +19,9 @@ namespace WindowsFormsApp1
             InitializeDataGridViewColumns();
             LoadDataGridViewData();
 
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen; 
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void Form1_Load(object sender, EventArgs e)
