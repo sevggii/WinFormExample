@@ -279,7 +279,16 @@ namespace WindowsFormsApp1
 
         private void txtPlaka_TextChanged(object sender, EventArgs e)
         {
-            LoadDataGridViewDataByPlaka(txtPlakaSorgu.Text);
+            string plakaFilter = txtPlaka.Text.Trim();
+
+            if (string.IsNullOrEmpty(plakaFilter))
+            {
+                LoadDataGridViewData(); 
+            }
+            else
+            {
+                LoadDataGridViewDataByPlaka(plakaFilter);
+            }
         }
 
         private void txtPoliceBaslangic_TextChanged(object sender, EventArgs e)
