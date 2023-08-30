@@ -154,7 +154,7 @@ namespace WindowsFormsApp1
             }
 
             txtDt.Text = formattedText;
-            txtDt.SelectionStart = formattedText.Length; // Move the cursor to end
+            txtDt.SelectionStart = formattedText.Length; 
 
         }
 

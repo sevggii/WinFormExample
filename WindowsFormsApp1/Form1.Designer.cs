@@ -58,9 +58,9 @@
             // 
             // btnControl
             // 
-            this.btnControl.Location = new System.Drawing.Point(785, 77);
+            this.btnControl.Location = new System.Drawing.Point(818, 135);
             this.btnControl.Name = "btnControl";
-            this.btnControl.Size = new System.Drawing.Size(122, 55);
+            this.btnControl.Size = new System.Drawing.Size(122, 37);
             this.btnControl.TabIndex = 0;
             this.btnControl.Text = "KONTROL";
             this.btnControl.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 70);
+            this.label1.Location = new System.Drawing.Point(190, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 1;
@@ -78,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(154, 101);
+            this.label2.Location = new System.Drawing.Point(190, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 2;
@@ -87,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(154, 122);
+            this.label3.Location = new System.Drawing.Point(190, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 3;
@@ -96,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(352, 66);
+            this.label4.Location = new System.Drawing.Point(388, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 4;
@@ -105,7 +105,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(352, 93);
+            this.label5.Location = new System.Drawing.Point(388, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 5;
@@ -114,7 +114,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(352, 122);
+            this.label6.Location = new System.Drawing.Point(388, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 6;
@@ -123,7 +123,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(542, 72);
+            this.label7.Location = new System.Drawing.Point(578, 95);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 13);
             this.label7.TabIndex = 7;
@@ -132,7 +132,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(542, 102);
+            this.label8.Location = new System.Drawing.Point(578, 125);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 13);
             this.label8.TabIndex = 8;
@@ -141,7 +141,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(542, 127);
+            this.label9.Location = new System.Drawing.Point(578, 150);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 13);
             this.label9.TabIndex = 9;
@@ -149,7 +149,7 @@
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(240, 62);
+            this.txtTC.Location = new System.Drawing.Point(276, 85);
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(67, 20);
             this.txtTC.TabIndex = 10;
@@ -157,14 +157,14 @@
             // 
             // txtPlaka
             // 
-            this.txtPlaka.Location = new System.Drawing.Point(240, 121);
+            this.txtPlaka.Location = new System.Drawing.Point(276, 144);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Size = new System.Drawing.Size(67, 20);
             this.txtPlaka.TabIndex = 12;
             // 
             // txtBelgeNo
             // 
-            this.txtBelgeNo.Location = new System.Drawing.Point(427, 62);
+            this.txtBelgeNo.Location = new System.Drawing.Point(463, 85);
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Size = new System.Drawing.Size(89, 20);
             this.txtBelgeNo.TabIndex = 13;
@@ -172,7 +172,7 @@
             // cbUrun
             // 
             this.cbUrun.FormattingEnabled = true;
-            this.cbUrun.Location = new System.Drawing.Point(427, 90);
+            this.cbUrun.Location = new System.Drawing.Point(463, 113);
             this.cbUrun.Name = "cbUrun";
             this.cbUrun.Size = new System.Drawing.Size(90, 21);
             this.cbUrun.TabIndex = 14;
@@ -180,7 +180,7 @@
             // cbOnay
             // 
             this.cbOnay.FormattingEnabled = true;
-            this.cbOnay.Location = new System.Drawing.Point(676, 123);
+            this.cbOnay.Location = new System.Drawing.Point(712, 146);
             this.cbOnay.Name = "cbOnay";
             this.cbOnay.Size = new System.Drawing.Size(88, 21);
             this.cbOnay.TabIndex = 18;
@@ -188,7 +188,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(186, 178);
+            this.dataGridView1.Location = new System.Drawing.Point(189, 195);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(934, 450);
             this.dataGridView1.TabIndex = 19;
@@ -196,7 +196,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(949, 101);
+            this.label10.Location = new System.Drawing.Point(1028, 105);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 13);
             this.label10.TabIndex = 20;
@@ -204,14 +204,14 @@
             // 
             // txt_plaka_sorgu
             // 
-            this.txt_plaka_sorgu.Location = new System.Drawing.Point(990, 98);
+            this.txt_plaka_sorgu.Location = new System.Drawing.Point(1002, 121);
             this.txt_plaka_sorgu.Name = "txt_plaka_sorgu";
             this.txt_plaka_sorgu.Size = new System.Drawing.Size(100, 20);
             this.txt_plaka_sorgu.TabIndex = 21;
             // 
             // btn_plaka_sorgu
             // 
-            this.btn_plaka_sorgu.Location = new System.Drawing.Point(1096, 96);
+            this.btn_plaka_sorgu.Location = new System.Drawing.Point(1014, 147);
             this.btn_plaka_sorgu.Name = "btn_plaka_sorgu";
             this.btn_plaka_sorgu.Size = new System.Drawing.Size(75, 23);
             this.btn_plaka_sorgu.TabIndex = 22;
@@ -221,7 +221,7 @@
             // 
             // txtDt
             // 
-            this.txtDt.Location = new System.Drawing.Point(240, 93);
+            this.txtDt.Location = new System.Drawing.Point(276, 116);
             this.txtDt.Name = "txtDt";
             this.txtDt.Size = new System.Drawing.Size(67, 20);
             this.txtDt.TabIndex = 28;
@@ -229,7 +229,7 @@
             // 
             // txtTeklifTarihi
             // 
-            this.txtTeklifTarihi.Location = new System.Drawing.Point(427, 125);
+            this.txtTeklifTarihi.Location = new System.Drawing.Point(463, 148);
             this.txtTeklifTarihi.Name = "txtTeklifTarihi";
             this.txtTeklifTarihi.Size = new System.Drawing.Size(90, 20);
             this.txtTeklifTarihi.TabIndex = 29;
@@ -238,14 +238,14 @@
             // 
             // txtPoliceBaslangic
             // 
-            this.txtPoliceBaslangic.Location = new System.Drawing.Point(676, 64);
+            this.txtPoliceBaslangic.Location = new System.Drawing.Point(712, 87);
             this.txtPoliceBaslangic.Name = "txtPoliceBaslangic";
             this.txtPoliceBaslangic.Size = new System.Drawing.Size(88, 20);
             this.txtPoliceBaslangic.TabIndex = 30;
             // 
             // txtPoliceBitis
             // 
-            this.txtPoliceBitis.Location = new System.Drawing.Point(676, 95);
+            this.txtPoliceBitis.Location = new System.Drawing.Point(712, 118);
             this.txtPoliceBitis.Name = "txtPoliceBitis";
             this.txtPoliceBitis.Size = new System.Drawing.Size(88, 20);
             this.txtPoliceBitis.TabIndex = 31;
@@ -254,6 +254,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1270, 727);
             this.Controls.Add(this.txtPoliceBitis);
             this.Controls.Add(this.txtPoliceBaslangic);
@@ -281,6 +282,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Poliçe Sorgu";
+            this.TransparencyKey = System.Drawing.Color.Aquamarine;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
