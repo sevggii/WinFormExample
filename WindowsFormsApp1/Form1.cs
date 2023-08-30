@@ -49,6 +49,7 @@ namespace WindowsFormsApp1
 
         private void LoadDataGridViewData()
         {
+            dataGridView1.Rows.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu FROM policycheck";
@@ -283,6 +284,7 @@ namespace WindowsFormsApp1
 
             if (string.IsNullOrEmpty(plakaFilter))
             {
+
                 LoadDataGridViewData(); 
             }
             else
