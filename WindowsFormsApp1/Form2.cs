@@ -24,11 +24,6 @@ namespace WindowsFormsApp1
             this.WindowState = FormWindowState.Normal;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             LoadDataGridViewData();
