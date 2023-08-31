@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnControl = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,16 +57,16 @@
             this.dateTime_teklifTarihi = new System.Windows.Forms.DateTimePicker();
             this.dateTime_policeBaslangic = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.onay_durumu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.police_bitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.police_baslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teklifTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urun = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.belgeNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plaka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tc_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tc_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plaka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.belgeNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teklifTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.police_baslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.police_bitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onay_durumu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -268,60 +272,6 @@
             this.panel1.Size = new System.Drawing.Size(923, 465);
             this.panel1.TabIndex = 37;
             // 
-            // onay_durumu
-            // 
-            this.onay_durumu.HeaderText = "Onay Durumu";
-            this.onay_durumu.Name = "onay_durumu";
-            this.onay_durumu.ReadOnly = true;
-            // 
-            // police_bitis
-            // 
-            this.police_bitis.HeaderText = "Police Bitiş Tarihi";
-            this.police_bitis.Name = "police_bitis";
-            this.police_bitis.ReadOnly = true;
-            // 
-            // police_baslangic
-            // 
-            this.police_baslangic.HeaderText = "Poliçe Başlangıç Tarihi";
-            this.police_baslangic.Name = "police_baslangic";
-            this.police_baslangic.ReadOnly = true;
-            // 
-            // teklifTarihi
-            // 
-            this.teklifTarihi.HeaderText = "Teklif Tarihi";
-            this.teklifTarihi.Name = "teklifTarihi";
-            this.teklifTarihi.ReadOnly = true;
-            // 
-            // urun
-            // 
-            this.urun.HeaderText = "Ürün";
-            this.urun.Name = "urun";
-            this.urun.ReadOnly = true;
-            // 
-            // belgeNo
-            // 
-            this.belgeNo.HeaderText = "Belge No";
-            this.belgeNo.Name = "belgeNo";
-            this.belgeNo.ReadOnly = true;
-            // 
-            // plaka
-            // 
-            this.plaka.HeaderText = "Plaka";
-            this.plaka.Name = "plaka";
-            this.plaka.ReadOnly = true;
-            // 
-            // dtarihi
-            // 
-            this.dtarihi.HeaderText = "Doğum Tarihi";
-            this.dtarihi.Name = "dtarihi";
-            this.dtarihi.ReadOnly = true;
-            // 
-            // tc_no
-            // 
-            this.tc_no.HeaderText = "TC Kimlik No";
-            this.tc_no.Name = "tc_no";
-            this.tc_no.ReadOnly = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -329,13 +279,29 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(24)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(179)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)), true);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(179)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tc_no,
             this.dtarihi,
@@ -346,17 +312,90 @@
             this.police_baslangic,
             this.police_bitis,
             this.onay_durumu});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(24)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(179)))), ((int)(((byte)(221)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowTemplate.Height = 50;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(917, 459);
             this.dataGridView1.TabIndex = 19;
+            // 
+            // tc_no
+            // 
+            this.tc_no.HeaderText = "TC Kimlik No";
+            this.tc_no.Name = "tc_no";
+            this.tc_no.ReadOnly = true;
+            // 
+            // dtarihi
+            // 
+            this.dtarihi.HeaderText = "Doğum Tarihi";
+            this.dtarihi.Name = "dtarihi";
+            this.dtarihi.ReadOnly = true;
+            // 
+            // plaka
+            // 
+            this.plaka.HeaderText = "Plaka";
+            this.plaka.Name = "plaka";
+            this.plaka.ReadOnly = true;
+            // 
+            // belgeNo
+            // 
+            this.belgeNo.HeaderText = "Belge No";
+            this.belgeNo.Name = "belgeNo";
+            this.belgeNo.ReadOnly = true;
+            // 
+            // urun
+            // 
+            this.urun.HeaderText = "Ürün";
+            this.urun.Name = "urun";
+            this.urun.ReadOnly = true;
+            // 
+            // teklifTarihi
+            // 
+            this.teklifTarihi.HeaderText = "Teklif Tarihi";
+            this.teklifTarihi.Name = "teklifTarihi";
+            this.teklifTarihi.ReadOnly = true;
+            // 
+            // police_baslangic
+            // 
+            this.police_baslangic.HeaderText = "Poliçe Başlangıç Tarihi";
+            this.police_baslangic.Name = "police_baslangic";
+            this.police_baslangic.ReadOnly = true;
+            // 
+            // police_bitis
+            // 
+            this.police_bitis.HeaderText = "Police Bitiş Tarihi";
+            this.police_bitis.Name = "police_bitis";
+            this.police_bitis.ReadOnly = true;
+            // 
+            // onay_durumu
+            // 
+            this.onay_durumu.HeaderText = "Onay Durumu";
+            this.onay_durumu.Name = "onay_durumu";
+            this.onay_durumu.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1270, 727);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTime_policeBaslangic);
@@ -381,6 +420,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnControl);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(36)))), ((int)(((byte)(62)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
