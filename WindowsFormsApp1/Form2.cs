@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : DevExpress.XtraEditors.XtraForm
     {
+        private string connectionString = "server=127.0.0.1;user=root;password=ASHF#183SDfgh;database=policydb;";
         public Form2()
         {
             InitializeComponent();
@@ -29,7 +31,149 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            LoadDataGridViewData();
+        }
+
+        private void btnPlakaSorgu_Click(object sender, EventArgs e)
+        {
+            LoadDataGridViewDataByPlaka(txtPlakaSorgu.Text);
+        }
+
+        private void LoadDataGridViewData()
+        {
+            dataGridView1.Rows.Clear();
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu FROM policycheck";
+
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(dataGridView1,
+                              reader["tcNo"],
+                              reader["dogumTarihi"],
+                              reader["plaka"],
+                              reader["belgeNo"],
+                              reader["urun"],
+                              reader["teklifTarihi"],
+                              reader["policeBaslangic"],
+                              reader["policeBitis"],
+                              reader["onayDurumu"]
+                          );
+                        dataGridView1.Rows.Add(row);
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void LoadDataGridViewDataByPlaka(string plaka)
+        {
+            dataGridView1.Rows.Clear();
+
+            if (plaka.Length > 0)
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
+                                   "FROM policycheck " +
+                                   "WHERE plaka LIKE @plakaFilter";
+
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@plakaFilter", plaka + "%");
+
+                    try
+                    {
+                        connection.Open();
+                        MySqlDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            DataGridViewRow row = new DataGridViewRow();
+                            row.CreateCells(dataGridView1,
+                                reader["tcNo"],
+                                reader["dogumTarihi"],
+                                reader["plaka"],
+                                reader["belgeNo"],
+                                reader["urun"],
+                                reader["teklifTarihi"],
+                                reader["policeBaslangic"],
+                                reader["policeBitis"],
+                                reader["onayDurumu"]
+                            );
+                            dataGridView1.Rows.Add(row);
+                        }
+
+                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+
+            try
+            {
+                connection.Open();
+
+                string tcNo = txtTC.Text;
+                string dogumTarihi = dateDt.Text;
+                string plaka = txtPlaka.Text;
+                string belgeNo = txtBelgeNo.Text;
+                string urun = cbUrun.SelectedItem?.ToString();
+                string teklifTarihi = dateTeklifTarihi.Text;
+                string policeBaslangic = datePoliceBaslangic.Text;
+                string policeBitis = datePoliceBitis.Text;
+                string onayDurumu = cbOnay.SelectedItem?.ToString();
+
+                string query = "INSERT INTO policycheck (tcNo, dogumTarihi,plaka,belgeNo,urun,teklifTarihi,policeBaslangic,policeBitis,onayDurumu) " +
+                    "VALUES (@tcNo, @dogumTarihi, @plaka, @belgeNo, @urun, @teklifTarihi, @policeBaslangic, @policeBitis, @onayDurumu)";
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                cmd.Parameters.AddWithValue("@tcNo", tcNo);
+                cmd.Parameters.AddWithValue("@dogumTarihi", dogumTarihi);
+                cmd.Parameters.AddWithValue("@plaka", plaka);
+                cmd.Parameters.AddWithValue("@belgeNo", belgeNo);
+                cmd.Parameters.AddWithValue("@urun", urun);
+                cmd.Parameters.AddWithValue("@teklifTarihi", teklifTarihi);
+                cmd.Parameters.AddWithValue("@policeBaslangic", policeBaslangic);
+                cmd.Parameters.AddWithValue("@policeBitis", policeBitis);
+                cmd.Parameters.AddWithValue("@onayDurumu", onayDurumu);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Veri Başarıyla Eklendi!");
+
+                dataGridView1.Rows.Clear();
+                LoadDataGridViewData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
