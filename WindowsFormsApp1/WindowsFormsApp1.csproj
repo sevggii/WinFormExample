@@ -396,6 +396,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -415,6 +416,8 @@
     <Content Include="images\neftlogo.ico" />
     <Content Include="images\query_icon_216695.ico" />
     <Content Include="images\query_icon_216695.png" />
+    <None Include="Resources\lookup&amp;reference_16x16.png" />
+    <None Include="Resources\add_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

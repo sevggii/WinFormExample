@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,15 +41,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTC = new DevExpress.XtraEditors.TextEdit();
-            this.dateDt = new DevExpress.XtraEditors.DateEdit();
-            this.txtPlaka = new DevExpress.XtraEditors.TextEdit();
-            this.txtBelgeNo = new DevExpress.XtraEditors.TextEdit();
-            this.txtUrun = new DevExpress.XtraEditors.TextEdit();
-            this.txtOnay = new DevExpress.XtraEditors.TextEdit();
-            this.dateTeklifTarihi = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tc_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,37 +52,39 @@
             this.police_bitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onay_durumu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtPlakaSorgu = new DevExpress.XtraEditors.TextEdit();
             this.btnPlakaSorgu = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBelgeNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUrun.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOnay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTeklifTarihi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTeklifTarihi.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
+            this.txtPlakaSorgu = new DevExpress.XtraEditors.TextEdit();
+            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateTeklifTarihi = new DevExpress.XtraEditors.DateEdit();
+            this.txtOnay = new DevExpress.XtraEditors.TextEdit();
+            this.txtUrun = new DevExpress.XtraEditors.TextEdit();
+            this.txtBelgeNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtPlaka = new DevExpress.XtraEditors.TextEdit();
+            this.dateDt = new DevExpress.XtraEditors.DateEdit();
+            this.txtTC = new DevExpress.XtraEditors.TextEdit();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlakaSorgu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTeklifTarihi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTeklifTarihi.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOnay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUrun.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBelgeNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(297, 119);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "KAYIT EKLE";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 38);
+            this.label1.Location = new System.Drawing.Point(52, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 2;
@@ -101,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 61);
+            this.label2.Location = new System.Drawing.Point(52, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 3;
@@ -110,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 85);
+            this.label3.Location = new System.Drawing.Point(52, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 4;
@@ -119,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(212, 38);
+            this.label4.Location = new System.Drawing.Point(251, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 5;
@@ -128,7 +120,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(212, 61);
+            this.label5.Location = new System.Drawing.Point(251, 50);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 6;
@@ -137,7 +129,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(212, 85);
+            this.label6.Location = new System.Drawing.Point(251, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 7;
@@ -146,7 +138,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(415, 38);
+            this.label7.Location = new System.Drawing.Point(454, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 13);
             this.label7.TabIndex = 8;
@@ -155,7 +147,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(415, 61);
+            this.label8.Location = new System.Drawing.Point(454, 50);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 13);
             this.label8.TabIndex = 9;
@@ -164,94 +156,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(415, 85);
+            this.label9.Location = new System.Drawing.Point(454, 74);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 13);
             this.label9.TabIndex = 10;
             this.label9.Text = "Onay Durumu :";
-            // 
-            // txtTC
-            // 
-            this.txtTC.Location = new System.Drawing.Point(90, 35);
-            this.txtTC.Name = "txtTC";
-            this.txtTC.Size = new System.Drawing.Size(100, 20);
-            this.txtTC.TabIndex = 11;
-            // 
-            // dateDt
-            // 
-            this.dateDt.EditValue = null;
-            this.dateDt.Location = new System.Drawing.Point(90, 58);
-            this.dateDt.Name = "dateDt";
-            this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateDt.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateDt.Size = new System.Drawing.Size(100, 20);
-            this.dateDt.TabIndex = 12;
-            // 
-            // txtPlaka
-            // 
-            this.txtPlaka.Location = new System.Drawing.Point(90, 85);
-            this.txtPlaka.Name = "txtPlaka";
-            this.txtPlaka.Size = new System.Drawing.Size(100, 20);
-            this.txtPlaka.TabIndex = 13;
-            // 
-            // txtBelgeNo
-            // 
-            this.txtBelgeNo.Location = new System.Drawing.Point(282, 35);
-            this.txtBelgeNo.Name = "txtBelgeNo";
-            this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
-            this.txtBelgeNo.TabIndex = 14;
-            // 
-            // txtUrun
-            // 
-            this.txtUrun.Location = new System.Drawing.Point(282, 58);
-            this.txtUrun.Name = "txtUrun";
-            this.txtUrun.Size = new System.Drawing.Size(100, 20);
-            this.txtUrun.TabIndex = 15;
-            // 
-            // txtOnay
-            // 
-            this.txtOnay.Location = new System.Drawing.Point(538, 84);
-            this.txtOnay.Name = "txtOnay";
-            this.txtOnay.Size = new System.Drawing.Size(100, 20);
-            this.txtOnay.TabIndex = 19;
-            // 
-            // dateTeklifTarihi
-            // 
-            this.dateTeklifTarihi.EditValue = null;
-            this.dateTeklifTarihi.Location = new System.Drawing.Point(282, 81);
-            this.dateTeklifTarihi.Name = "dateTeklifTarihi";
-            this.dateTeklifTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTeklifTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateTeklifTarihi.Size = new System.Drawing.Size(100, 20);
-            this.dateTeklifTarihi.TabIndex = 20;
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(538, 35);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(100, 20);
-            this.dateEdit1.TabIndex = 21;
-            // 
-            // dateEdit2
-            // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(538, 58);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(100, 20);
-            this.dateEdit2.TabIndex = 22;
             // 
             // dataGridView1
             // 
@@ -300,7 +209,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(-4, 160);
+            this.dataGridView1.Location = new System.Drawing.Point(-3, 171);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -313,7 +222,7 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(838, 242);
+            this.dataGridView1.Size = new System.Drawing.Size(838, 244);
             this.dataGridView1.TabIndex = 23;
             // 
             // tc_no
@@ -373,32 +282,125 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(731, 38);
+            this.label10.Location = new System.Drawing.Point(269, 148);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 24;
-            this.label10.Text = "Plaka";
+            this.label10.Text = "Plaka :";
+            // 
+            // btnPlakaSorgu
+            // 
+            this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(413, 143);
+            this.btnPlakaSorgu.Name = "btnPlakaSorgu";
+            this.btnPlakaSorgu.Size = new System.Drawing.Size(57, 23);
+            this.btnPlakaSorgu.TabIndex = 26;
+            this.btnPlakaSorgu.Text = "ARA";
             // 
             // txtPlakaSorgu
             // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(701, 54);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(307, 145);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
             this.txtPlakaSorgu.TabIndex = 25;
             // 
-            // btnPlakaSorgu
+            // dateEdit2
             // 
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(713, 79);
-            this.btnPlakaSorgu.Name = "btnPlakaSorgu";
-            this.btnPlakaSorgu.Size = new System.Drawing.Size(75, 23);
-            this.btnPlakaSorgu.TabIndex = 26;
-            this.btnPlakaSorgu.Text = "KAYIT EKLE";
+            this.dateEdit2.EditValue = null;
+            this.dateEdit2.Location = new System.Drawing.Point(577, 47);
+            this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Size = new System.Drawing.Size(100, 20);
+            this.dateEdit2.TabIndex = 22;
+            // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(577, 24);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(100, 20);
+            this.dateEdit1.TabIndex = 21;
+            // 
+            // dateTeklifTarihi
+            // 
+            this.dateTeklifTarihi.EditValue = null;
+            this.dateTeklifTarihi.Location = new System.Drawing.Point(321, 70);
+            this.dateTeklifTarihi.Name = "dateTeklifTarihi";
+            this.dateTeklifTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTeklifTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTeklifTarihi.Size = new System.Drawing.Size(100, 20);
+            this.dateTeklifTarihi.TabIndex = 20;
+            // 
+            // txtOnay
+            // 
+            this.txtOnay.Location = new System.Drawing.Point(577, 73);
+            this.txtOnay.Name = "txtOnay";
+            this.txtOnay.Size = new System.Drawing.Size(100, 20);
+            this.txtOnay.TabIndex = 19;
+            // 
+            // txtUrun
+            // 
+            this.txtUrun.Location = new System.Drawing.Point(321, 47);
+            this.txtUrun.Name = "txtUrun";
+            this.txtUrun.Size = new System.Drawing.Size(100, 20);
+            this.txtUrun.TabIndex = 15;
+            // 
+            // txtBelgeNo
+            // 
+            this.txtBelgeNo.Location = new System.Drawing.Point(321, 24);
+            this.txtBelgeNo.Name = "txtBelgeNo";
+            this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
+            this.txtBelgeNo.TabIndex = 14;
+            // 
+            // txtPlaka
+            // 
+            this.txtPlaka.Location = new System.Drawing.Point(129, 74);
+            this.txtPlaka.Name = "txtPlaka";
+            this.txtPlaka.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaka.TabIndex = 13;
+            // 
+            // dateDt
+            // 
+            this.dateDt.EditValue = null;
+            this.dateDt.Location = new System.Drawing.Point(129, 47);
+            this.dateDt.Name = "dateDt";
+            this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateDt.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateDt.Size = new System.Drawing.Size(100, 20);
+            this.dateDt.TabIndex = 12;
+            // 
+            // txtTC
+            // 
+            this.txtTC.Location = new System.Drawing.Point(129, 24);
+            this.txtTC.Name = "txtTC";
+            this.txtTC.Size = new System.Drawing.Size(100, 20);
+            this.txtTC.TabIndex = 11;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.add_16x16;
+            this.btnAdd.Location = new System.Drawing.Point(700, 50);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(88, 23);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "KAYIT EKLE";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 400);
+            this.ClientSize = new System.Drawing.Size(832, 411);
             this.Controls.Add(this.btnPlakaSorgu);
             this.Controls.Add(this.txtPlakaSorgu);
             this.Controls.Add(this.label10);
@@ -424,21 +426,21 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "Form2";
             this.Text = "Poliçe Sorgu";
-            ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBelgeNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUrun.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOnay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTeklifTarihi.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTeklifTarihi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlakaSorgu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTeklifTarihi.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTeklifTarihi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOnay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUrun.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBelgeNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlaka.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
