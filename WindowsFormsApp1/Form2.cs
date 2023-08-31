@@ -22,6 +22,9 @@ namespace WindowsFormsApp1
             //this.WindowState = FormWindowState.Maximized;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.WindowState = FormWindowState.Normal;
+
+            txtPlakaSorgu.TextChanged += txtPlakaSorgu_TextChanged; // Attach TextChanged event handler
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -173,32 +176,8 @@ namespace WindowsFormsApp1
 
         private void txtPlakaSorgu_TextChanged(object sender, EventArgs e)
         {
-            string plakaFilter = txtPlaka.Text.Trim();
-
-            if (string.IsNullOrEmpty(plakaFilter))
-            {
-
-                LoadDataGridViewData();
-            }
-            else
-            {
-                LoadDataGridViewDataByPlaka(plakaFilter);
-            }
-        }
-
-        private void txtPlaka_TextChanged(object sender, EventArgs e)
-        {
-            string plakaFilter = txtPlaka.Text.Trim();
-
-            if (string.IsNullOrEmpty(plakaFilter))
-            {
-
-                LoadDataGridViewData();
-            }
-            else
-            {
-                LoadDataGridViewDataByPlaka(plakaFilter);
-            }
+            string plakaFilter = txtPlakaSorgu.Text.Trim();
+            LoadDataGridViewDataByPlaka(plakaFilter);
         }
     }
 }
