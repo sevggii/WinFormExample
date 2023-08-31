@@ -44,16 +44,6 @@
             this.txtBelgeNo = new System.Windows.Forms.TextBox();
             this.cbUrun = new System.Windows.Forms.ComboBox();
             this.cbOnay = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tc_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plaka = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.belgeNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urun = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teklifTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.police_baslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.police_bitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onay_durumu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPlakaSorgu = new System.Windows.Forms.TextBox();
             this.btnPlakaSorgu = new System.Windows.Forms.Button();
@@ -62,6 +52,18 @@
             this.dateTime_dtarihi = new System.Windows.Forms.DateTimePicker();
             this.dateTime_teklifTarihi = new System.Windows.Forms.DateTimePicker();
             this.dateTime_policeBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.onay_durumu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.police_bitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.police_baslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teklifTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.belgeNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plaka = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tc_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,90 +197,6 @@
             this.cbOnay.Size = new System.Drawing.Size(97, 21);
             this.cbOnay.TabIndex = 18;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tc_no,
-            this.dtarihi,
-            this.plaka,
-            this.belgeNo,
-            this.urun,
-            this.teklifTarihi,
-            this.police_baslangic,
-            this.police_bitis,
-            this.onay_durumu});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(178, 156);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(934, 471);
-            this.dataGridView1.TabIndex = 19;
-            // 
-            // tc_no
-            // 
-            this.tc_no.HeaderText = "TC Kimlik No";
-            this.tc_no.Name = "tc_no";
-            this.tc_no.ReadOnly = true;
-            // 
-            // dtarihi
-            // 
-            this.dtarihi.HeaderText = "Doğum Tarihi";
-            this.dtarihi.Name = "dtarihi";
-            this.dtarihi.ReadOnly = true;
-            // 
-            // plaka
-            // 
-            this.plaka.HeaderText = "Plaka";
-            this.plaka.Name = "plaka";
-            this.plaka.ReadOnly = true;
-            // 
-            // belgeNo
-            // 
-            this.belgeNo.HeaderText = "Belge No";
-            this.belgeNo.Name = "belgeNo";
-            this.belgeNo.ReadOnly = true;
-            // 
-            // urun
-            // 
-            this.urun.HeaderText = "Ürün";
-            this.urun.Name = "urun";
-            this.urun.ReadOnly = true;
-            // 
-            // teklifTarihi
-            // 
-            this.teklifTarihi.HeaderText = "Teklif Tarihi";
-            this.teklifTarihi.Name = "teklifTarihi";
-            this.teklifTarihi.ReadOnly = true;
-            // 
-            // police_baslangic
-            // 
-            this.police_baslangic.HeaderText = "Poliçe Başlangıç Tarihi";
-            this.police_baslangic.Name = "police_baslangic";
-            this.police_baslangic.ReadOnly = true;
-            // 
-            // police_bitis
-            // 
-            this.police_bitis.HeaderText = "Police Bitiş Tarihi";
-            this.police_bitis.Name = "police_bitis";
-            this.police_bitis.ReadOnly = true;
-            // 
-            // onay_durumu
-            // 
-            this.onay_durumu.HeaderText = "Onay Durumu";
-            this.onay_durumu.Name = "onay_durumu";
-            this.onay_durumu.ReadOnly = true;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -339,12 +257,108 @@
             this.dateTime_policeBaslangic.Size = new System.Drawing.Size(97, 20);
             this.dateTime_policeBaslangic.TabIndex = 36;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(170, 160);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(923, 465);
+            this.panel1.TabIndex = 37;
+            // 
+            // onay_durumu
+            // 
+            this.onay_durumu.HeaderText = "Onay Durumu";
+            this.onay_durumu.Name = "onay_durumu";
+            this.onay_durumu.ReadOnly = true;
+            // 
+            // police_bitis
+            // 
+            this.police_bitis.HeaderText = "Police Bitiş Tarihi";
+            this.police_bitis.Name = "police_bitis";
+            this.police_bitis.ReadOnly = true;
+            // 
+            // police_baslangic
+            // 
+            this.police_baslangic.HeaderText = "Poliçe Başlangıç Tarihi";
+            this.police_baslangic.Name = "police_baslangic";
+            this.police_baslangic.ReadOnly = true;
+            // 
+            // teklifTarihi
+            // 
+            this.teklifTarihi.HeaderText = "Teklif Tarihi";
+            this.teklifTarihi.Name = "teklifTarihi";
+            this.teklifTarihi.ReadOnly = true;
+            // 
+            // urun
+            // 
+            this.urun.HeaderText = "Ürün";
+            this.urun.Name = "urun";
+            this.urun.ReadOnly = true;
+            // 
+            // belgeNo
+            // 
+            this.belgeNo.HeaderText = "Belge No";
+            this.belgeNo.Name = "belgeNo";
+            this.belgeNo.ReadOnly = true;
+            // 
+            // plaka
+            // 
+            this.plaka.HeaderText = "Plaka";
+            this.plaka.Name = "plaka";
+            this.plaka.ReadOnly = true;
+            // 
+            // dtarihi
+            // 
+            this.dtarihi.HeaderText = "Doğum Tarihi";
+            this.dtarihi.Name = "dtarihi";
+            this.dtarihi.ReadOnly = true;
+            // 
+            // tc_no
+            // 
+            this.tc_no.HeaderText = "TC Kimlik No";
+            this.tc_no.Name = "tc_no";
+            this.tc_no.ReadOnly = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tc_no,
+            this.dtarihi,
+            this.plaka,
+            this.belgeNo,
+            this.urun,
+            this.teklifTarihi,
+            this.police_baslangic,
+            this.police_bitis,
+            this.onay_durumu});
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(917, 459);
+            this.dataGridView1.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1270, 727);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTime_policeBaslangic);
             this.Controls.Add(this.dateTime_teklifTarihi);
             this.Controls.Add(this.dateTime_dtarihi);
@@ -352,7 +366,6 @@
             this.Controls.Add(this.btnPlakaSorgu);
             this.Controls.Add(this.txtPlakaSorgu);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbOnay);
             this.Controls.Add(this.cbUrun);
             this.Controls.Add(this.txtBelgeNo);
@@ -375,6 +388,7 @@
             this.Text = "SORGU SAYFASI";
             this.TransparencyKey = System.Drawing.Color.MintCream;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -398,11 +412,16 @@
         private System.Windows.Forms.TextBox txtBelgeNo;
         private System.Windows.Forms.ComboBox cbUrun;
         private System.Windows.Forms.ComboBox cbOnay;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPlakaSorgu;
         private System.Windows.Forms.Button btnPlakaSorgu;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
+        private System.Windows.Forms.DateTimePicker dateTime_policeBitis;
+        private System.Windows.Forms.DateTimePicker dateTime_dtarihi;
+        private System.Windows.Forms.DateTimePicker dateTime_teklifTarihi;
+        private System.Windows.Forms.DateTimePicker dateTime_policeBaslangic;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tc_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtarihi;
         private System.Windows.Forms.DataGridViewTextBoxColumn plaka;
@@ -412,10 +431,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn police_baslangic;
         private System.Windows.Forms.DataGridViewTextBoxColumn police_bitis;
         private System.Windows.Forms.DataGridViewTextBoxColumn onay_durumu;
-        private System.Windows.Forms.DateTimePicker dateTime_policeBitis;
-        private System.Windows.Forms.DateTimePicker dateTime_dtarihi;
-        private System.Windows.Forms.DateTimePicker dateTime_teklifTarihi;
-        private System.Windows.Forms.DateTimePicker dateTime_policeBaslangic;
     }
 }
 
