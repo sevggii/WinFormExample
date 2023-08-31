@@ -84,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 27);
+            this.label1.Location = new System.Drawing.Point(43, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 2;
@@ -93,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 50);
+            this.label2.Location = new System.Drawing.Point(43, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 3;
@@ -102,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 74);
+            this.label3.Location = new System.Drawing.Point(43, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 4;
@@ -111,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(251, 27);
+            this.label4.Location = new System.Drawing.Point(242, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 5;
@@ -120,7 +120,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(251, 50);
+            this.label5.Location = new System.Drawing.Point(242, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 6;
@@ -129,7 +129,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(251, 74);
+            this.label6.Location = new System.Drawing.Point(242, 106);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 7;
@@ -138,7 +138,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(454, 27);
+            this.label7.Location = new System.Drawing.Point(445, 59);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 13);
             this.label7.TabIndex = 8;
@@ -147,7 +147,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(454, 50);
+            this.label8.Location = new System.Drawing.Point(445, 82);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 13);
             this.label8.TabIndex = 9;
@@ -156,7 +156,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(454, 74);
+            this.label9.Location = new System.Drawing.Point(445, 106);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 13);
             this.label9.TabIndex = 10;
@@ -209,7 +209,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(-5, 148);
+            this.dataGridView1.Location = new System.Drawing.Point(-5, 185);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -222,7 +222,7 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(838, 242);
+            this.dataGridView1.Size = new System.Drawing.Size(838, 266);
             this.dataGridView1.TabIndex = 23;
             // 
             // tc_no
@@ -282,7 +282,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(307, 125);
+            this.label10.Location = new System.Drawing.Point(565, 162);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 24;
@@ -291,7 +291,7 @@
             // btnPlakaSorgu
             // 
             this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(451, 120);
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(709, 157);
             this.btnPlakaSorgu.Name = "btnPlakaSorgu";
             this.btnPlakaSorgu.Size = new System.Drawing.Size(57, 23);
             this.btnPlakaSorgu.TabIndex = 26;
@@ -299,7 +299,7 @@
             // 
             // txtPlakaSorgu
             // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(345, 122);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(603, 159);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
             this.txtPlakaSorgu.TabIndex = 25;
@@ -307,7 +307,7 @@
             // dateEdit2
             // 
             this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(577, 47);
+            this.dateEdit2.Location = new System.Drawing.Point(568, 79);
             this.dateEdit2.Name = "dateEdit2";
             this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -319,7 +319,7 @@
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(577, 24);
+            this.dateEdit1.Location = new System.Drawing.Point(568, 56);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -331,7 +331,7 @@
             // dateTeklifTarihi
             // 
             this.dateTeklifTarihi.EditValue = null;
-            this.dateTeklifTarihi.Location = new System.Drawing.Point(321, 70);
+            this.dateTeklifTarihi.Location = new System.Drawing.Point(312, 102);
             this.dateTeklifTarihi.Name = "dateTeklifTarihi";
             this.dateTeklifTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -342,28 +342,28 @@
             // 
             // txtOnay
             // 
-            this.txtOnay.Location = new System.Drawing.Point(577, 73);
+            this.txtOnay.Location = new System.Drawing.Point(568, 105);
             this.txtOnay.Name = "txtOnay";
             this.txtOnay.Size = new System.Drawing.Size(100, 20);
             this.txtOnay.TabIndex = 19;
             // 
             // txtUrun
             // 
-            this.txtUrun.Location = new System.Drawing.Point(321, 47);
+            this.txtUrun.Location = new System.Drawing.Point(312, 79);
             this.txtUrun.Name = "txtUrun";
             this.txtUrun.Size = new System.Drawing.Size(100, 20);
             this.txtUrun.TabIndex = 15;
             // 
             // txtBelgeNo
             // 
-            this.txtBelgeNo.Location = new System.Drawing.Point(321, 24);
+            this.txtBelgeNo.Location = new System.Drawing.Point(312, 56);
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
             this.txtBelgeNo.TabIndex = 14;
             // 
             // txtPlaka
             // 
-            this.txtPlaka.Location = new System.Drawing.Point(129, 74);
+            this.txtPlaka.Location = new System.Drawing.Point(120, 106);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Size = new System.Drawing.Size(100, 20);
             this.txtPlaka.TabIndex = 13;
@@ -371,7 +371,7 @@
             // dateDt
             // 
             this.dateDt.EditValue = null;
-            this.dateDt.Location = new System.Drawing.Point(129, 47);
+            this.dateDt.Location = new System.Drawing.Point(120, 79);
             this.dateDt.Name = "dateDt";
             this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -382,7 +382,7 @@
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(129, 24);
+            this.txtTC.Location = new System.Drawing.Point(120, 56);
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(100, 20);
             this.txtTC.TabIndex = 11;
@@ -390,7 +390,7 @@
             // btnAdd
             // 
             this.btnAdd.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.add_16x16;
-            this.btnAdd.Location = new System.Drawing.Point(700, 50);
+            this.btnAdd.Location = new System.Drawing.Point(691, 82);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(88, 23);
             this.btnAdd.TabIndex = 0;
@@ -400,7 +400,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 388);
+            this.ClientSize = new System.Drawing.Size(832, 449);
             this.Controls.Add(this.btnPlakaSorgu);
             this.Controls.Add(this.txtPlakaSorgu);
             this.Controls.Add(this.label10);
