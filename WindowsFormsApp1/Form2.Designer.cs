@@ -209,7 +209,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(-3, 171);
+            this.dataGridView1.Location = new System.Drawing.Point(-5, 148);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -222,7 +222,7 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(838, 244);
+            this.dataGridView1.Size = new System.Drawing.Size(838, 242);
             this.dataGridView1.TabIndex = 23;
             // 
             // tc_no
@@ -282,7 +282,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(269, 148);
+            this.label10.Location = new System.Drawing.Point(307, 125);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 24;
@@ -291,7 +291,7 @@
             // btnPlakaSorgu
             // 
             this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(413, 143);
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(451, 120);
             this.btnPlakaSorgu.Name = "btnPlakaSorgu";
             this.btnPlakaSorgu.Size = new System.Drawing.Size(57, 23);
             this.btnPlakaSorgu.TabIndex = 26;
@@ -299,7 +299,7 @@
             // 
             // txtPlakaSorgu
             // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(307, 145);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(345, 122);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
             this.txtPlakaSorgu.TabIndex = 25;
@@ -400,7 +400,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 411);
+            this.ClientSize = new System.Drawing.Size(832, 388);
             this.Controls.Add(this.btnPlakaSorgu);
             this.Controls.Add(this.txtPlakaSorgu);
             this.Controls.Add(this.label10);
