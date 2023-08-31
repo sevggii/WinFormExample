@@ -198,7 +198,7 @@ namespace WindowsFormsApp1
             {
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF (*.pdf)|*.pdf";
-                save.FileName = "PDFRaport.pdf";
+                save.FileName = "PDF_Raport.pdf";
 
                 if (save.ShowDialog() == DialogResult.OK)
                 {
