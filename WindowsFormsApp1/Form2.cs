@@ -16,6 +16,10 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+
+            //this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }
