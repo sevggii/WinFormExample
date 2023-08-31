@@ -216,14 +216,14 @@ namespace WindowsFormsApp1
                             pTable.WidthPercentage = 100;
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                            // Add column headers to the PDF table
+                            
                             foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
                             {
                                 PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
                                 pTable.AddCell(pCell);
                             }
 
-                            // Add rows and cells to the PDF table
+                            /
                             foreach (DataGridViewRow viewRow in advancedDataGridView1.Rows)
                             {
                                 foreach (DataGridViewCell dcell in viewRow.Cells)
@@ -233,7 +233,7 @@ namespace WindowsFormsApp1
                                 }
                             }
 
-                            // Add the PDF table to the PDF document
+                            
                             document.Add(pTable);
 
                             document.Close();
