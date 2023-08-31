@@ -206,14 +206,14 @@ namespace WindowsFormsApp1
                     {
                         using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
                         {
-                            Document document = new Document(PageSize.A4, 8f, 16f, 16f, 8f);
+                            Document document = new Document(PageSize.A4, 8, 16f, 16f, 8f);
                             PdfWriter writer = PdfWriter.GetInstance(document, fileStream);
 
                             document.Open();
 
                             PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
                             pTable.DefaultCell.Padding = 2;
-                            pTable.WidthPercentage = 100;
+                            pTable.WidthPercentage = 150;
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
                             
