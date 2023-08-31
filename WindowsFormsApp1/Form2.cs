@@ -223,7 +223,7 @@ namespace WindowsFormsApp1
                                 pTable.AddCell(pCell);
                             }
 
-                            /
+                           
                             foreach (DataGridViewRow viewRow in advancedDataGridView1.Rows)
                             {
                                 foreach (DataGridViewCell dcell in viewRow.Cells)
