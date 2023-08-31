@@ -190,5 +190,20 @@ namespace WindowsFormsApp1
                 LoadDataGridViewDataByPlaka(plakaFilter);
             }
         }
+
+        private void txtPlaka_TextChanged(object sender, EventArgs e)
+        {
+            string plakaFilter = txtPlaka.Text.Trim();
+
+            if (string.IsNullOrEmpty(plakaFilter))
+            {
+
+                LoadDataGridViewData();
+            }
+            else
+            {
+                LoadDataGridViewDataByPlaka(plakaFilter);
+            }
+        }
     }
 }
