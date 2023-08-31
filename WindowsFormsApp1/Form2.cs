@@ -1,10 +1,14 @@
-﻿using DevExpress.XtraEditors;
+﻿using ADGV;
+using DevExpress.XtraEditors;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -184,7 +188,69 @@ namespace WindowsFormsApp1
             }
             else
             {
-                LoadDataGridViewDataByPlaka(plakaFilter); 
+                LoadDataGridViewDataByPlaka(plakaFilter);
+            }
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            if (advancedDataGridView1.Rows.Count > 0)
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF (*.pdf)|*.pdf";
+                save.FileName = "PDFRaport.pdf";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
+                        {
+                            Document document = new Document(PageSize.A4, 8f, 16f, 16f, 8f);
+                            PdfWriter writer = PdfWriter.GetInstance(document, fileStream);
+
+                            document.Open();
+
+                            PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
+                            pTable.DefaultCell.Padding = 2;
+                            pTable.WidthPercentage = 100;
+                            pTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            // Add column headers to the PDF table
+                            foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
+                            {
+                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
+                                pTable.AddCell(pCell);
+                            }
+
+                            // Add rows and cells to the PDF table
+                            foreach (DataGridViewRow viewRow in advancedDataGridView1.Rows)
+                            {
+                                foreach (DataGridViewCell dcell in viewRow.Cells)
+                                {
+                                    string cellValue = dcell.Value != null ? dcell.Value.ToString() : "";
+                                    pTable.AddCell(cellValue);
+                                }
+                            }
+
+                            // Add the PDF table to the PDF document
+                            document.Add(pTable);
+
+                            document.Close();
+                            fileStream.Close();
+
+                            MessageBox.Show("PDF Başarılı Şekilde Kaydedildi");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hata oluştu :( " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Kayıt Bulunamadı", "Info");
             }
         }
     }

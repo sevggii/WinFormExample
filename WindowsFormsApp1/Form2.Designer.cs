@@ -304,6 +304,7 @@
             this.btnPDF.Size = new System.Drawing.Size(123, 38);
             this.btnPDF.TabIndex = 53;
             this.btnPDF.Text = "PDF AL";
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // cbOnay
             // 
