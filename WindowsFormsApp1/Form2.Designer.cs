@@ -28,19 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.cbOnay = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbUrun = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnPlakaSorgu = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPlakaSorgu = new DevExpress.XtraEditors.TextEdit();
+            this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tc_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,9 +48,6 @@
             this.police_baslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.police_bitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onay_durumu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnPlakaSorgu = new DevExpress.XtraEditors.SimpleButton();
-            this.txtPlakaSorgu = new DevExpress.XtraEditors.TextEdit();
             this.datePoliceBitis = new DevExpress.XtraEditors.DateEdit();
             this.datePoliceBaslangic = new DevExpress.XtraEditors.DateEdit();
             this.dateTeklifTarihi = new DevExpress.XtraEditors.DateEdit();
@@ -61,11 +55,22 @@
             this.txtPlaka = new DevExpress.XtraEditors.TextEdit();
             this.dateDt = new DevExpress.XtraEditors.DateEdit();
             this.txtTC = new DevExpress.XtraEditors.TextEdit();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.cbUrun = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbOnay = new DevExpress.XtraEditors.ComboBoxEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbOnay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbUrun.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlakaSorgu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePoliceBitis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePoliceBitis.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePoliceBaslangic.Properties)).BeginInit();
@@ -77,90 +82,94 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbUrun.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbOnay.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // panelControl1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "TC Kimlik No :";
+            this.panelControl1.Controls.Add(this.cbOnay);
+            this.panelControl1.Controls.Add(this.cbUrun);
+            this.panelControl1.Controls.Add(this.btnPlakaSorgu);
+            this.panelControl1.Controls.Add(this.txtPlakaSorgu);
+            this.panelControl1.Controls.Add(this.label10);
+            this.panelControl1.Controls.Add(this.dataGridView1);
+            this.panelControl1.Controls.Add(this.datePoliceBitis);
+            this.panelControl1.Controls.Add(this.datePoliceBaslangic);
+            this.panelControl1.Controls.Add(this.dateTeklifTarihi);
+            this.panelControl1.Controls.Add(this.txtBelgeNo);
+            this.panelControl1.Controls.Add(this.txtPlaka);
+            this.panelControl1.Controls.Add(this.dateDt);
+            this.panelControl1.Controls.Add(this.txtTC);
+            this.panelControl1.Controls.Add(this.label9);
+            this.panelControl1.Controls.Add(this.label8);
+            this.panelControl1.Controls.Add(this.label7);
+            this.panelControl1.Controls.Add(this.label6);
+            this.panelControl1.Controls.Add(this.label5);
+            this.panelControl1.Controls.Add(this.label4);
+            this.panelControl1.Controls.Add(this.label3);
+            this.panelControl1.Controls.Add(this.label2);
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Controls.Add(this.btnAdd);
+            this.panelControl1.Location = new System.Drawing.Point(-2, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(832, 546);
+            this.panelControl1.TabIndex = 0;
             // 
-            // label2
+            // cbOnay
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Doğum Tarihi :";
+            this.cbOnay.Location = new System.Drawing.Point(614, 137);
+            this.cbOnay.Name = "cbOnay";
+            this.cbOnay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbOnay.Properties.Items.AddRange(new object[] {
+            "Onaylandı",
+            "Bekliyor",
+            "Onaylanmadı"});
+            this.cbOnay.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbOnay.Size = new System.Drawing.Size(100, 20);
+            this.cbOnay.TabIndex = 51;
             // 
-            // label3
+            // cbUrun
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Plaka :";
+            this.cbUrun.Location = new System.Drawing.Point(366, 114);
+            this.cbUrun.Name = "cbUrun";
+            this.cbUrun.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbUrun.Properties.Items.AddRange(new object[] {
+            "Kasko",
+            "Trafik",
+            "Sağlık",
+            "Dask",
+            "Konut",
+            "Yangın",
+            "Diğer"});
+            this.cbUrun.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbUrun.Size = new System.Drawing.Size(100, 20);
+            this.cbUrun.TabIndex = 50;
             // 
-            // label4
+            // btnPlakaSorgu
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(292, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Belge No :";
+            this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(164, 9);
+            this.btnPlakaSorgu.Name = "btnPlakaSorgu";
+            this.btnPlakaSorgu.Size = new System.Drawing.Size(57, 23);
+            this.btnPlakaSorgu.TabIndex = 49;
+            this.btnPlakaSorgu.Text = "ARA";
             // 
-            // label5
+            // txtPlakaSorgu
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(292, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Ürün :";
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(58, 11);
+            this.txtPlakaSorgu.Name = "txtPlakaSorgu";
+            this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
+            this.txtPlakaSorgu.TabIndex = 48;
             // 
-            // label6
+            // label10
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(292, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Teklif Tarihi :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(487, 97);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Poliçe Başlangıç Tarihi :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(487, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Poliçe Bitiş Tarihi :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(487, 144);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Onay Durumu :";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(20, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 47;
+            this.label10.Text = "Plaka :";
             // 
             // dataGridView1
             // 
@@ -169,26 +178,26 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(180)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(180)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(180)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(180)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tc_no,
@@ -200,31 +209,30 @@
             this.police_baslangic,
             this.police_bitis,
             this.onay_durumu});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(-7, 215);
+            this.dataGridView1.Location = new System.Drawing.Point(-3, 212);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(180)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(180)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 50;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(838, 326);
-            this.dataGridView1.TabIndex = 23;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.TabIndex = 46;
             // 
             // tc_no
             // 
@@ -280,37 +288,10 @@
             this.onay_durumu.Name = "onay_durumu";
             this.onay_durumu.ReadOnly = true;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Plaka :";
-            // 
-            // btnPlakaSorgu
-            // 
-            this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(160, 12);
-            this.btnPlakaSorgu.Name = "btnPlakaSorgu";
-            this.btnPlakaSorgu.Size = new System.Drawing.Size(57, 23);
-            this.btnPlakaSorgu.TabIndex = 26;
-            this.btnPlakaSorgu.Text = "ARA";
-            this.btnPlakaSorgu.Click += new System.EventHandler(this.btnPlakaSorgu_Click);
-            // 
-            // txtPlakaSorgu
-            // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(54, 14);
-            this.txtPlakaSorgu.Name = "txtPlakaSorgu";
-            this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
-            this.txtPlakaSorgu.TabIndex = 25;
-            this.txtPlakaSorgu.TextChanged += new System.EventHandler(this.txtPlakaSorgu_TextChanged);
-            // 
             // datePoliceBitis
             // 
             this.datePoliceBitis.EditValue = null;
-            this.datePoliceBitis.Location = new System.Drawing.Point(610, 117);
+            this.datePoliceBitis.Location = new System.Drawing.Point(614, 114);
             this.datePoliceBitis.Name = "datePoliceBitis";
             this.datePoliceBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -318,12 +299,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.datePoliceBitis.Properties.MaskSettings.Set("mask", "d");
             this.datePoliceBitis.Size = new System.Drawing.Size(100, 20);
-            this.datePoliceBitis.TabIndex = 22;
+            this.datePoliceBitis.TabIndex = 45;
             // 
             // datePoliceBaslangic
             // 
             this.datePoliceBaslangic.EditValue = null;
-            this.datePoliceBaslangic.Location = new System.Drawing.Point(610, 94);
+            this.datePoliceBaslangic.Location = new System.Drawing.Point(614, 91);
             this.datePoliceBaslangic.Name = "datePoliceBaslangic";
             this.datePoliceBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -331,12 +312,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.datePoliceBaslangic.Properties.MaskSettings.Set("mask", "d");
             this.datePoliceBaslangic.Size = new System.Drawing.Size(100, 20);
-            this.datePoliceBaslangic.TabIndex = 21;
+            this.datePoliceBaslangic.TabIndex = 44;
             // 
             // dateTeklifTarihi
             // 
             this.dateTeklifTarihi.EditValue = null;
-            this.dateTeklifTarihi.Location = new System.Drawing.Point(362, 140);
+            this.dateTeklifTarihi.Location = new System.Drawing.Point(366, 137);
             this.dateTeklifTarihi.Name = "dateTeklifTarihi";
             this.dateTeklifTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -344,26 +325,26 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateTeklifTarihi.Properties.MaskSettings.Set("mask", "d");
             this.dateTeklifTarihi.Size = new System.Drawing.Size(100, 20);
-            this.dateTeklifTarihi.TabIndex = 20;
+            this.dateTeklifTarihi.TabIndex = 43;
             // 
             // txtBelgeNo
             // 
-            this.txtBelgeNo.Location = new System.Drawing.Point(362, 94);
+            this.txtBelgeNo.Location = new System.Drawing.Point(366, 91);
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
-            this.txtBelgeNo.TabIndex = 14;
+            this.txtBelgeNo.TabIndex = 42;
             // 
             // txtPlaka
             // 
-            this.txtPlaka.Location = new System.Drawing.Point(172, 144);
+            this.txtPlaka.Location = new System.Drawing.Point(176, 141);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Size = new System.Drawing.Size(100, 20);
-            this.txtPlaka.TabIndex = 13;
+            this.txtPlaka.TabIndex = 41;
             // 
             // dateDt
             // 
             this.dateDt.EditValue = null;
-            this.dateDt.Location = new System.Drawing.Point(172, 117);
+            this.dateDt.Location = new System.Drawing.Point(176, 114);
             this.dateDt.Name = "dateDt";
             this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -371,91 +352,122 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateDt.Properties.MaskSettings.Set("mask", "d");
             this.dateDt.Size = new System.Drawing.Size(100, 20);
-            this.dateDt.TabIndex = 12;
+            this.dateDt.TabIndex = 40;
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(172, 94);
+            this.txtTC.Location = new System.Drawing.Point(176, 91);
             this.txtTC.Name = "txtTC";
             this.txtTC.Properties.MaxLength = 11;
             this.txtTC.Size = new System.Drawing.Size(100, 20);
-            this.txtTC.TabIndex = 11;
+            this.txtTC.TabIndex = 39;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(491, 141);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Onay Durumu :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(491, 117);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Poliçe Bitiş Tarihi :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(491, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Poliçe Başlangıç Tarihi :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(296, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Teklif Tarihi :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(296, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Ürün :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(296, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Belge No :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(99, 141);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Plaka :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(99, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Doğum Tarihi :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(99, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "TC Kimlik No :";
             // 
             // btnAdd
             // 
             this.btnAdd.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.add_16x16;
-            this.btnAdd.Location = new System.Drawing.Point(362, 166);
+            this.btnAdd.Location = new System.Drawing.Point(366, 163);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 31);
-            this.btnAdd.TabIndex = 0;
+            this.btnAdd.TabIndex = 29;
             this.btnAdd.Text = "KAYIT EKLE";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // cbUrun
-            // 
-            this.cbUrun.Location = new System.Drawing.Point(362, 117);
-            this.cbUrun.Name = "cbUrun";
-            this.cbUrun.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbUrun.Properties.Items.AddRange(new object[] {
-            "Kasko",
-            "Trafik",
-            "Sağlık",
-            "Dask",
-            "Konut",
-            "Yangın",
-            "Diğer"});
-            this.cbUrun.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbUrun.Size = new System.Drawing.Size(100, 20);
-            this.cbUrun.TabIndex = 27;
-            // 
-            // cbOnay
-            // 
-            this.cbOnay.Location = new System.Drawing.Point(610, 140);
-            this.cbOnay.Name = "cbOnay";
-            this.cbOnay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbOnay.Properties.Items.AddRange(new object[] {
-            "Onaylandı",
-            "Bekliyor",
-            "Onaylanmadı"});
-            this.cbOnay.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbOnay.Size = new System.Drawing.Size(100, 20);
-            this.cbOnay.TabIndex = 28;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 544);
-            this.Controls.Add(this.cbOnay);
-            this.Controls.Add(this.cbUrun);
-            this.Controls.Add(this.btnPlakaSorgu);
-            this.Controls.Add(this.txtPlakaSorgu);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.datePoliceBitis);
-            this.Controls.Add(this.datePoliceBaslangic);
-            this.Controls.Add(this.dateTeklifTarihi);
-            this.Controls.Add(this.txtBelgeNo);
-            this.Controls.Add(this.txtPlaka);
-            this.Controls.Add(this.dateDt);
-            this.Controls.Add(this.txtTC);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.panelControl1);
             this.Name = "Form2";
             this.Text = "Poliçe Sorgu";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbOnay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbUrun.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlakaSorgu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePoliceBitis.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePoliceBitis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datePoliceBaslangic.Properties.CalendarTimeProperties)).EndInit();
@@ -467,32 +479,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbUrun.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbOnay.Properties)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton btnAdd;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.TextEdit txtTC;
-        private DevExpress.XtraEditors.DateEdit dateDt;
-        private DevExpress.XtraEditors.TextEdit txtPlaka;
-        private DevExpress.XtraEditors.TextEdit txtBelgeNo;
-        private DevExpress.XtraEditors.DateEdit dateTeklifTarihi;
-        private DevExpress.XtraEditors.DateEdit datePoliceBaslangic;
-        private DevExpress.XtraEditors.DateEdit datePoliceBitis;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbOnay;
+        private DevExpress.XtraEditors.ComboBoxEdit cbUrun;
+        private DevExpress.XtraEditors.SimpleButton btnPlakaSorgu;
+        private DevExpress.XtraEditors.TextEdit txtPlakaSorgu;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tc_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtarihi;
@@ -503,10 +501,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn police_baslangic;
         private System.Windows.Forms.DataGridViewTextBoxColumn police_bitis;
         private System.Windows.Forms.DataGridViewTextBoxColumn onay_durumu;
-        private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.TextEdit txtPlakaSorgu;
-        private DevExpress.XtraEditors.SimpleButton btnPlakaSorgu;
-        private DevExpress.XtraEditors.ComboBoxEdit cbUrun;
-        private DevExpress.XtraEditors.ComboBoxEdit cbOnay;
+        private DevExpress.XtraEditors.DateEdit datePoliceBitis;
+        private DevExpress.XtraEditors.DateEdit datePoliceBaslangic;
+        private DevExpress.XtraEditors.DateEdit dateTeklifTarihi;
+        private DevExpress.XtraEditors.TextEdit txtBelgeNo;
+        private DevExpress.XtraEditors.TextEdit txtPlaka;
+        private DevExpress.XtraEditors.DateEdit dateDt;
+        private DevExpress.XtraEditors.TextEdit txtTC;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SimpleButton btnAdd;
     }
 }
