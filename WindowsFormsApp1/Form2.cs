@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
 
         private void LoadDataGridViewData()
         {
-            dataGridView1.Rows.Clear();
+            advancedDataGridView1.Rows.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu FROM policycheck";
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
                     while (reader.Read())
                     {
                         DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(dataGridView1,
+                        row.CreateCells(advancedDataGridView1,
                               reader["tcNo"],
                               reader["dogumTarihi"],
                               reader["plaka"],
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
                               reader["policeBitis"],
                               reader["onayDurumu"]
                           );
-                        dataGridView1.Rows.Add(row);
+                        advancedDataGridView1.Rows.Add(row);
                     }
 
                     reader.Close();
@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
 
         private void LoadDataGridViewDataByPlaka(string plaka)
         {
-            dataGridView1.Rows.Clear();
+            advancedDataGridView1.Rows.Clear();
 
             if (plaka.Length > 0)
             {
@@ -100,7 +100,7 @@ namespace WindowsFormsApp1
                         while (reader.Read())
                         {
                             DataGridViewRow row = new DataGridViewRow();
-                            row.CreateCells(dataGridView1,
+                            row.CreateCells(advancedDataGridView1,
                                 reader["tcNo"],
                                 reader["dogumTarihi"],
                                 reader["plaka"],
@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
                                 reader["policeBitis"],
                                 reader["onayDurumu"]
                             );
-                            dataGridView1.Rows.Add(row);
+                            advancedDataGridView1.Rows.Add(row);
                         }
 
                         reader.Close();
@@ -161,7 +161,7 @@ namespace WindowsFormsApp1
 
                 MessageBox.Show("Veri Başarıyla Eklendi!");
 
-                dataGridView1.Rows.Clear();
+                advancedDataGridView1.Rows.Clear();
                 LoadDataGridViewData();
             }
             catch (Exception ex)
