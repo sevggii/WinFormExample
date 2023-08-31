@@ -177,7 +177,15 @@ namespace WindowsFormsApp1
         private void txtPlakaSorgu_TextChanged(object sender, EventArgs e)
         {
             string plakaFilter = txtPlakaSorgu.Text.Trim();
-            LoadDataGridViewDataByPlaka(plakaFilter);
+
+            if (string.IsNullOrEmpty(plakaFilter))
+            {
+                LoadDataGridViewData();
+            }
+            else
+            {
+                LoadDataGridViewDataByPlaka(plakaFilter); 
+            }
         }
     }
 }
