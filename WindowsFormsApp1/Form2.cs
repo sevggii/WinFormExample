@@ -227,6 +227,7 @@ namespace WindowsFormsApp1
                             foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
                             {
                                 PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText, font));
+                                pCell.HorizontalAlignment = Element.ALIGN_CENTER; // Center-align header text
                                 pTable.AddCell(pCell);
                             }
 
@@ -235,7 +236,9 @@ namespace WindowsFormsApp1
                                 foreach (DataGridViewCell dcell in viewRow.Cells)
                                 {
                                     string cellValue = dcell.Value != null ? dcell.Value.ToString() : "";
-                                    pTable.AddCell(new Phrase(cellValue, font));
+                                    PdfPCell cell = new PdfPCell(new Phrase(cellValue, font));
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER; // Center-align cell text
+                                    pTable.AddCell(cell);
                                 }
                             }
 
