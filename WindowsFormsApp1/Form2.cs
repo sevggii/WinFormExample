@@ -217,24 +217,28 @@ namespace WindowsFormsApp1
                             pTable.WidthPercentage = 80;
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                            
+                            // Use a font that supports Turkish characters
+                            string fontPath = "C:\\Windows\\Fonts\\times.ttf"; // Replace with the actual font path
+                            iTextSharp.text.pdf.BaseFont baseFont = iTextSharp.text.pdf.BaseFont.CreateFont(fontPath, iTextSharp.text.pdf.BaseFont.IDENTITY_H, iTextSharp.text.pdf.BaseFont.EMBEDDED);
+
+                            // Create a font with the desired size and base font
+                            iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
+
                             foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
                             {
-                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText));
+                                PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText, font));
                                 pTable.AddCell(pCell);
                             }
 
-                           
                             foreach (DataGridViewRow viewRow in advancedDataGridView1.Rows)
                             {
                                 foreach (DataGridViewCell dcell in viewRow.Cells)
                                 {
                                     string cellValue = dcell.Value != null ? dcell.Value.ToString() : "";
-                                    pTable.AddCell(cellValue);
+                                    pTable.AddCell(new Phrase(cellValue, font));
                                 }
                             }
 
-                            
                             document.Add(pTable);
 
                             document.Close();
