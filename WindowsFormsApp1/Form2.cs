@@ -15,6 +15,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using iTextSharp.text;
+
 namespace WindowsFormsApp1
 {
     public partial class Form2 : DevExpress.XtraEditors.XtraForm
@@ -207,14 +209,18 @@ namespace WindowsFormsApp1
                     {
                         using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
                         {
-                            Document document = new Document(PageSize.A2, 8f, 16f, 16f, 8f);
+                            iTextSharp.text.Rectangle pageSize = new iTextSharp.text.Rectangle(PageSize.A4.Rotate());
+
+
+                            Document document = new Document(pageSize, 10f, 10f, 10f, 10f);
+
                             PdfWriter writer = PdfWriter.GetInstance(document, fileStream);
 
                             document.Open();
 
                             PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
                             pTable.DefaultCell.Padding = 2;
-                            pTable.WidthPercentage = 80;
+                            pTable.WidthPercentage = 100; //Fit the table to the width of the page
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
                             // Use a font that supports Turkish characters
@@ -261,5 +267,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Kayıt Bulunamadı", "Info");
             }
         }
+
     }
 }
