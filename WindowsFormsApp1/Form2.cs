@@ -34,6 +34,7 @@ namespace WindowsFormsApp1
 
             dateDt.Properties.DisplayFormat.FormatString = "d/M/yyyy";
             dateDt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+
             datePoliceBaslangic.Properties.DisplayFormat.FormatString = "d/M/yyyy";
             datePoliceBaslangic.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             datePoliceBitis.Properties.DisplayFormat.FormatString = "d/M/yyyy";
@@ -308,10 +309,9 @@ namespace WindowsFormsApp1
 
         private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Accept only numbers and control keys (backspace, delete, etc.)
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true;// Reject keystroke
+                e.Handled = true;
             }
         }
     }

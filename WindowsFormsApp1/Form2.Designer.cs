@@ -301,6 +301,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.datePoliceBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.datePoliceBitis.Properties.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.datePoliceBitis.Properties.MaskSettings.Set("mask", "d/M/yyyy");
             this.datePoliceBitis.Size = new System.Drawing.Size(100, 20);
             this.datePoliceBitis.TabIndex = 45;
@@ -314,6 +315,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.datePoliceBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.datePoliceBaslangic.Properties.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.datePoliceBaslangic.Properties.MaskSettings.Set("mask", "d/M/yyyy");
             this.datePoliceBaslangic.Size = new System.Drawing.Size(100, 20);
             this.datePoliceBaslangic.TabIndex = 44;
@@ -327,6 +329,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateTeklifTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateTeklifTarihi.Properties.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.dateTeklifTarihi.Properties.MaskSettings.Set("mask", "d/M/yyyy");
             this.dateTeklifTarihi.Size = new System.Drawing.Size(100, 20);
             this.dateTeklifTarihi.TabIndex = 43;
@@ -356,6 +359,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateDt.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateDt.Properties.FirstDayOfWeek = System.DayOfWeek.Monday;
             this.dateDt.Properties.MaskSettings.Set("mask", "d/M/yyyy");
             this.dateDt.Size = new System.Drawing.Size(100, 20);
             this.dateDt.TabIndex = 40;
