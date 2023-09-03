@@ -211,7 +211,6 @@ namespace WindowsFormsApp1
                         {
                             iTextSharp.text.Rectangle pageSize = new iTextSharp.text.Rectangle(PageSize.A4.Rotate());
 
-
                             Document document = new Document(pageSize, 10f, 10f, 10f, 10f);
 
                             PdfWriter writer = PdfWriter.GetInstance(document, fileStream);
@@ -219,7 +218,6 @@ namespace WindowsFormsApp1
                             document.Open();
 
                             PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
-                            pTable.DefaultCell.Padding = 2;
                             pTable.WidthPercentage = 100; //Fit the table to the width of the page
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
@@ -230,10 +228,15 @@ namespace WindowsFormsApp1
                             // Create a font with the desired size and base font
                             iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
 
+                            // Add spacing before and after table (padding)
+                            pTable.SpacingBefore = 10f; // 10 units of spacing before table
+                            pTable.SpacingAfter = 10f; // 10 units of spacing after table
+
                             foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
                             {
                                 PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText, font));
                                 pCell.HorizontalAlignment = Element.ALIGN_CENTER; // Center-align header text
+                                pCell.Padding = 5f; // 5 units of padding between text and cell border
                                 pTable.AddCell(pCell);
                             }
 
@@ -244,6 +247,8 @@ namespace WindowsFormsApp1
                                     string cellValue = dcell.Value != null ? dcell.Value.ToString() : "";
                                     PdfPCell cell = new PdfPCell(new Phrase(cellValue, font));
                                     cell.HorizontalAlignment = Element.ALIGN_CENTER; // Center-align cell text
+                                    cell.VerticalAlignment = Element.ALIGN_MIDDLE; // Middle-align cell text vertically
+                                    cell.Padding = 5f; // 5 units of padding between text and cell border
                                     pTable.AddCell(cell);
                                 }
                             }
@@ -267,6 +272,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Kayıt Bulunamadı", "Info");
             }
         }
+
+
 
     }
 }
