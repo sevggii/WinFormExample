@@ -266,7 +266,10 @@ namespace WindowsFormsApp1
                             document.Close();
                             fileStream.Close();
 
-                            MessageBox.Show("PDF Başarılı Şekilde Kaydedildi");
+                            //MessageBox.Show("PDF Başarılı Şekilde Kaydedildi");
+
+                            //opens PDF
+                            System.Diagnostics.Process.Start(save.FileName);
                         }
                     }
                     catch (Exception ex)
