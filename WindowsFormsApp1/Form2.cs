@@ -218,19 +218,23 @@ namespace WindowsFormsApp1
                         using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
                         {
                             iTextSharp.text.Rectangle pageSize = new iTextSharp.text.Rectangle(PageSize.A4.Rotate());
+
                             Document document = new Document(pageSize, 10f, 10f, 10f, 10f);
+
                             PdfWriter writer = PdfWriter.GetInstance(document, fileStream);
+
                             document.Open();
 
                             PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
-                            pTable.WidthPercentage = 100;
+                            pTable.WidthPercentage = 100; 
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
                             string fontPath = "C:\\Windows\\Fonts\\arial.ttf";
                             iTextSharp.text.pdf.BaseFont baseFont = iTextSharp.text.pdf.BaseFont.CreateFont(fontPath, iTextSharp.text.pdf.BaseFont.IDENTITY_H, iTextSharp.text.pdf.BaseFont.EMBEDDED);
+
                             iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
 
-                            pTable.SpacingBefore = 10f;
+                            pTable.SpacingBefore = 10f; 
                             pTable.SpacingAfter = 10f;
 
                             foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
@@ -240,7 +244,7 @@ namespace WindowsFormsApp1
                                 pCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                                 pCell.PaddingTop = 10f;
                                 pCell.PaddingBottom = 10f;
-                                pCell.Border = PdfPCell.BOX; // BOTTOM_BORDER;
+                                pCell.Border = PdfPCell.BOTTOM_BORDER; 
                                 pTable.AddCell(pCell);
                             }
 
@@ -250,22 +254,21 @@ namespace WindowsFormsApp1
                                 {
                                     string cellValue = dcell.Value != null ? dcell.Value.ToString() : "";
                                     PdfPCell cell = new PdfPCell(new Phrase(cellValue, font));
-                                    cell.HorizontalAlignment = Element.ALIGN_LEFT;
+                                    cell.HorizontalAlignment = Element.ALIGN_LEFT; 
                                     cell.VerticalAlignment = Element.ALIGN_MIDDLE;
                                     cell.PaddingTop = 10f;
                                     cell.PaddingBottom = 10f;
-                                    cell.Border = PdfPCell.BOX; // BOTTOM_BORDER;
+                                    cell.Border = PdfPCell.BOTTOM_BORDER; 
                                     pTable.AddCell(cell);
                                 }
                             }
 
-                            // Hücre genişliklerini otomatik ayarla
-                            float[] columnWidths = new float[advancedDataGridView1.Columns.Count];
+                            float[] widths = new float[advancedDataGridView1.Columns.Count];
                             for (int i = 0; i < advancedDataGridView1.Columns.Count; i++)
                             {
-                                columnWidths[i] = (float)advancedDataGridView1.Columns[i].Width;
+                                widths[i] = 2f;
                             }
-                            pTable.SetTotalWidth(columnWidths);
+                            pTable.SetWidths(widths);
 
                             document.Add(pTable);
 
@@ -286,8 +289,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Kayıt Bulunamadı", "Bilgi");
             }
         }
-
-
 
 
         private void advancedDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
