@@ -209,7 +209,7 @@ namespace WindowsFormsApp1
             {
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF (*.pdf)|*.pdf";
-                save.FileName = "PDF_Raport.pdf";
+                save.FileName = "Report.pdf";
 
                 if (save.ShowDialog() == DialogResult.OK)
                 {
@@ -226,14 +226,14 @@ namespace WindowsFormsApp1
                             document.Open();
 
                             PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
-                            pTable.WidthPercentage = 100; //Fit the table to the width of the page
+                            pTable.WidthPercentage = 100; //Fit table to width of the page
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                            // Use a font that supports Turkish characters
-                            string fontPath = "C:\\Windows\\Fonts\\times.ttf"; // Replace with the actual font path
+                            
+                            string fontPath = "C:\\Windows\\Fonts\\times.ttf"; 
                             iTextSharp.text.pdf.BaseFont baseFont = iTextSharp.text.pdf.BaseFont.CreateFont(fontPath, iTextSharp.text.pdf.BaseFont.IDENTITY_H, iTextSharp.text.pdf.BaseFont.EMBEDDED);
 
-                            // Create a font with the desired size and base font
+                            
                             iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
 
                             // Add spacing before and after table (padding)
@@ -266,9 +266,6 @@ namespace WindowsFormsApp1
                             document.Close();
                             fileStream.Close();
 
-                            //MessageBox.Show("PDF Başarılı Şekilde Kaydedildi");
-
-                            //opens PDF
                             System.Diagnostics.Process.Start(save.FileName);
                         }
                     }
