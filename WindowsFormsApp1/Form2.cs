@@ -226,25 +226,28 @@ namespace WindowsFormsApp1
                             document.Open();
 
                             PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
-                            pTable.WidthPercentage = 100; //Fit table to width of the page
+                            pTable.WidthPercentage = 100; // fit table to width of page
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                            
-                            string fontPath = "C:\\Windows\\Fonts\\times.ttf"; 
+                            string fontPath = "C:\\Windows\\Fonts\\arial.ttf";
                             iTextSharp.text.pdf.BaseFont baseFont = iTextSharp.text.pdf.BaseFont.CreateFont(fontPath, iTextSharp.text.pdf.BaseFont.IDENTITY_H, iTextSharp.text.pdf.BaseFont.EMBEDDED);
 
-                            
-                            iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
+                           
+                            iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
 
-                            // Add spacing before and after table (padding)
-                            pTable.SpacingBefore = 10f; // 10 units of spacing before table
-                            pTable.SpacingAfter = 10f; // 10 units of spacing after table
+                          
+                            pTable.SpacingBefore = 10f;
+                            pTable.SpacingAfter = 10f;
 
                             foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
                             {
+                                
                                 PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText, font));
-                                pCell.HorizontalAlignment = Element.ALIGN_CENTER; // Center-align header text
-                                pCell.Padding = 5f; // 5 units of padding between text and cell border
+                                pCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                pCell.VerticalAlignment = Element.ALIGN_MIDDLE;
+                                pCell.PaddingTop = 10f;
+                                pCell.PaddingBottom = 10f;
+
                                 pTable.AddCell(pCell);
                             }
 
@@ -254,12 +257,22 @@ namespace WindowsFormsApp1
                                 {
                                     string cellValue = dcell.Value != null ? dcell.Value.ToString() : "";
                                     PdfPCell cell = new PdfPCell(new Phrase(cellValue, font));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER; // Center-align cell text
-                                    cell.VerticalAlignment = Element.ALIGN_MIDDLE; // Middle-align cell text vertically
-                                    cell.Padding = 5f; // 5 units of padding between text and cell border
+                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    cell.VerticalAlignment = Element.ALIGN_MIDDLE;
+                                    cell.PaddingTop = 10f;
+                                    cell.PaddingBottom = 10f;
+
                                     pTable.AddCell(cell);
                                 }
                             }
+
+                            // width of cells
+                            float[] widths = new float[advancedDataGridView1.Columns.Count];
+                            for (int i = 0; i < advancedDataGridView1.Columns.Count; i++)
+                            {
+                                widths[i] = 2f;
+                            }
+                            pTable.SetWidths(widths);
 
                             document.Add(pTable);
 
@@ -277,9 +290,10 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("Kayıt Bulunamadı", "Info");
+                MessageBox.Show("Kayıt Bulunamadı", "Bilgi");
             }
         }
+
 
         private void advancedDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
