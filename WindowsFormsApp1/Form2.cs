@@ -226,28 +226,25 @@ namespace WindowsFormsApp1
                             document.Open();
 
                             PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
-                            pTable.WidthPercentage = 100; // fit table to width of page
+                            pTable.WidthPercentage = 100; 
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
                             string fontPath = "C:\\Windows\\Fonts\\arial.ttf";
                             iTextSharp.text.pdf.BaseFont baseFont = iTextSharp.text.pdf.BaseFont.CreateFont(fontPath, iTextSharp.text.pdf.BaseFont.IDENTITY_H, iTextSharp.text.pdf.BaseFont.EMBEDDED);
 
-                           
-                            iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                            iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
 
-                          
-                            pTable.SpacingBefore = 10f;
+                            pTable.SpacingBefore = 10f; 
                             pTable.SpacingAfter = 10f;
 
                             foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
                             {
-                                
                                 PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText, font));
-                                pCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                pCell.HorizontalAlignment = Element.ALIGN_LEFT;
                                 pCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                                 pCell.PaddingTop = 10f;
                                 pCell.PaddingBottom = 10f;
-
+                                pCell.Border = PdfPCell.BOTTOM_BORDER; 
                                 pTable.AddCell(pCell);
                             }
 
@@ -257,16 +254,15 @@ namespace WindowsFormsApp1
                                 {
                                     string cellValue = dcell.Value != null ? dcell.Value.ToString() : "";
                                     PdfPCell cell = new PdfPCell(new Phrase(cellValue, font));
-                                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                                    cell.HorizontalAlignment = Element.ALIGN_LEFT; 
                                     cell.VerticalAlignment = Element.ALIGN_MIDDLE;
                                     cell.PaddingTop = 10f;
                                     cell.PaddingBottom = 10f;
-
+                                    cell.Border = PdfPCell.BOTTOM_BORDER; 
                                     pTable.AddCell(cell);
                                 }
                             }
 
-                            // width of cells
                             float[] widths = new float[advancedDataGridView1.Columns.Count];
                             for (int i = 0; i < advancedDataGridView1.Columns.Count; i++)
                             {
@@ -328,5 +324,6 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
+
     }
 }
