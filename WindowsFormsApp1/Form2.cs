@@ -38,6 +38,7 @@ namespace WindowsFormsApp1
             datePoliceBaslangic.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             datePoliceBitis.Properties.DisplayFormat.FormatString = "d/M/yyyy";
             datePoliceBitis.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -293,6 +294,24 @@ namespace WindowsFormsApp1
                         e.FormattingApplied = true;
                     }
                 }
+            }
+        }
+
+        private void txtBelgeNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Accept only numbers and control keys (backspace, delete, etc.)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;// Reject keystroke
+            }
+        }
+
+        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Accept only numbers and control keys (backspace, delete, etc.)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;// Reject keystroke
             }
         }
     }

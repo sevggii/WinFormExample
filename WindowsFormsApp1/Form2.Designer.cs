@@ -337,11 +337,13 @@
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
             this.txtBelgeNo.TabIndex = 42;
+            this.txtBelgeNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBelgeNo_KeyPress);
             // 
             // txtPlaka
             // 
             this.txtPlaka.Location = new System.Drawing.Point(176, 141);
             this.txtPlaka.Name = "txtPlaka";
+            this.txtPlaka.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlaka.Size = new System.Drawing.Size(100, 20);
             this.txtPlaka.TabIndex = 41;
             // 
@@ -365,6 +367,7 @@
             this.txtTC.Properties.MaxLength = 11;
             this.txtTC.Size = new System.Drawing.Size(100, 20);
             this.txtTC.TabIndex = 39;
+            this.txtTC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTC_KeyPress);
             // 
             // label9
             // 
