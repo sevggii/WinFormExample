@@ -32,6 +32,12 @@ namespace WindowsFormsApp1
 
             txtPlakaSorgu.TextChanged += txtPlakaSorgu_TextChanged; // Attach TextChanged event handler
 
+            dateDt.Properties.DisplayFormat.FormatString = "d/M/yyyy";
+            dateDt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            datePoliceBaslangic.Properties.DisplayFormat.FormatString = "d/M/yyyy";
+            datePoliceBaslangic.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            datePoliceBitis.Properties.DisplayFormat.FormatString = "d/M/yyyy";
+            datePoliceBitis.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -273,7 +279,21 @@ namespace WindowsFormsApp1
             }
         }
 
-
-
+        private void advancedDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+           
+            if (e.ColumnIndex == 6 || e.ColumnIndex == 6)
+            {
+                if (e.Value != null && e.Value != DBNull.Value)
+                {
+                    if (e.Value is DateTime)
+                    {
+                        DateTime dateTime = (DateTime)e.Value;
+                        e.Value = dateTime.ToString("dd/MM/yyyy");
+                        e.FormattingApplied = true;
+                    }
+                }
+            }
+        }
     }
 }
