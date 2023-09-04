@@ -270,81 +270,81 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(593, 144);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.Size = new System.Drawing.Size(77, 13);
             this.label9.TabIndex = 38;
-            this.label9.Text = "Onay Durumu";
+            this.label9.Text = "Onay Durumu:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(593, 121);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 13);
+            this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 37;
-            this.label8.Text = "Poliçe Bitiş Tarihi";
+            this.label8.Text = "Poliçe Bitiş Tarihi:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(593, 98);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 13);
+            this.label7.Size = new System.Drawing.Size(114, 13);
             this.label7.TabIndex = 36;
-            this.label7.Text = "Poliçe Başlangıç Tarihi";
+            this.label7.Text = "Poliçe Başlangıç Tarihi:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(355, 145);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 35;
-            this.label6.Text = "Teklif Tarihi ";
+            this.label6.Text = "Teklif Tarihi:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(355, 121);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Ürün";
+            this.label5.Text = "Ürün:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(355, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Belge No";
+            this.label4.Text = "Belge No:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(107, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Plaka ";
+            this.label3.Text = "Plaka:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(107, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Doğum Tarihi";
+            this.label2.Text = "Doğum Tarihi:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(107, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 30;
-            this.label1.Text = "TC Kimlik No";
+            this.label1.Text = "TC Kimlik No:";
             // 
             // btnAdd
             // 
