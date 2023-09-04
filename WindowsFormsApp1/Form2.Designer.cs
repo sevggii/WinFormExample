@@ -236,7 +236,7 @@
             // 
             // cbOnay
             // 
-            this.cbOnay.Location = new System.Drawing.Point(692, 131);
+            this.cbOnay.Location = new System.Drawing.Point(735, 131);
             this.cbOnay.Name = "cbOnay";
             this.cbOnay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -269,7 +269,7 @@
             // btnPlakaSorgu
             // 
             this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(164, 9);
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(163, 23);
             this.btnPlakaSorgu.Name = "btnPlakaSorgu";
             this.btnPlakaSorgu.Size = new System.Drawing.Size(57, 23);
             this.btnPlakaSorgu.TabIndex = 49;
@@ -278,7 +278,7 @@
             // 
             // txtPlakaSorgu
             // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(58, 11);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(57, 25);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
             this.txtPlakaSorgu.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
@@ -288,16 +288,16 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 14);
+            this.label10.Location = new System.Drawing.Point(19, 28);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.Size = new System.Drawing.Size(32, 13);
             this.label10.TabIndex = 47;
-            this.label10.Text = "Plaka :";
+            this.label10.Text = "Plaka";
             // 
             // datePoliceBitis
             // 
             this.datePoliceBitis.EditValue = null;
-            this.datePoliceBitis.Location = new System.Drawing.Point(692, 108);
+            this.datePoliceBitis.Location = new System.Drawing.Point(735, 108);
             this.datePoliceBitis.Name = "datePoliceBitis";
             this.datePoliceBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -311,7 +311,7 @@
             // datePoliceBaslangic
             // 
             this.datePoliceBaslangic.EditValue = null;
-            this.datePoliceBaslangic.Location = new System.Drawing.Point(692, 85);
+            this.datePoliceBaslangic.Location = new System.Drawing.Point(735, 85);
             this.datePoliceBaslangic.Name = "datePoliceBaslangic";
             this.datePoliceBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -346,7 +346,7 @@
             // 
             // txtPlaka
             // 
-            this.txtPlaka.Location = new System.Drawing.Point(254, 135);
+            this.txtPlaka.Location = new System.Drawing.Point(203, 135);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlaka.Size = new System.Drawing.Size(100, 20);
@@ -355,7 +355,7 @@
             // dateDt
             // 
             this.dateDt.EditValue = null;
-            this.dateDt.Location = new System.Drawing.Point(254, 108);
+            this.dateDt.Location = new System.Drawing.Point(203, 108);
             this.dateDt.Name = "dateDt";
             this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -368,7 +368,7 @@
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(254, 85);
+            this.txtTC.Location = new System.Drawing.Point(203, 85);
             this.txtTC.Name = "txtTC";
             this.txtTC.Properties.MaxLength = 11;
             this.txtTC.Size = new System.Drawing.Size(100, 20);
@@ -378,88 +378,88 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(569, 135);
+            this.label9.Location = new System.Drawing.Point(612, 134);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.Size = new System.Drawing.Size(73, 13);
             this.label9.TabIndex = 38;
-            this.label9.Text = "Onay Durumu :";
+            this.label9.Text = "Onay Durumu";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(569, 111);
+            this.label8.Location = new System.Drawing.Point(612, 111);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 13);
+            this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 37;
-            this.label8.Text = "Poliçe Bitiş Tarihi :";
+            this.label8.Text = "Poliçe Bitiş Tarihi";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(569, 88);
+            this.label7.Location = new System.Drawing.Point(612, 88);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.Size = new System.Drawing.Size(110, 13);
             this.label7.TabIndex = 36;
-            this.label7.Text = "Poliçe Başlangıç Tarihi :";
+            this.label7.Text = "Poliçe Başlangıç Tarihi";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(374, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
+            this.label6.Size = new System.Drawing.Size(64, 13);
             this.label6.TabIndex = 35;
-            this.label6.Text = "Teklif Tarihi :";
+            this.label6.Text = "Teklif Tarihi ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(374, 111);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Ürün :";
+            this.label5.Text = "Ürün";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(374, 88);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Belge No :";
+            this.label4.Text = "Belge No";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(177, 135);
+            this.label3.Location = new System.Drawing.Point(126, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Plaka :";
+            this.label3.Text = "Plaka ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 111);
+            this.label2.Location = new System.Drawing.Point(126, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Doğum Tarihi :";
+            this.label2.Text = "Doğum Tarihi";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(177, 88);
+            this.label1.Location = new System.Drawing.Point(126, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 30;
-            this.label1.Text = "TC Kimlik No :";
+            this.label1.Text = "TC Kimlik No";
             // 
             // btnAdd
             // 
             this.btnAdd.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.add_16x16;
-            this.btnAdd.Location = new System.Drawing.Point(444, 157);
+            this.btnAdd.Location = new System.Drawing.Point(444, 169);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 31);
             this.btnAdd.TabIndex = 29;
