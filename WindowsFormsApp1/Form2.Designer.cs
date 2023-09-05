@@ -53,15 +53,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
-            this.onay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.policeBitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.policeBaslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teklif_tarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urun_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.belge_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plakaa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dogumTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogumTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plakaa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.belge_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urun_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teklif_tarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.policeBaslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.policeBitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbOnay.Properties)).BeginInit();
@@ -109,15 +109,15 @@
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.btnAdd);
-            this.panelControl1.Location = new System.Drawing.Point(6, 1);
+            this.panelControl1.Location = new System.Drawing.Point(3, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(940, 713);
+            this.panelControl1.Size = new System.Drawing.Size(941, 554);
             this.panelControl1.TabIndex = 0;
             // 
             // btnPDF
             // 
             this.btnPDF.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.printviapdf_32x32;
-            this.btnPDF.Location = new System.Drawing.Point(803, 218);
+            this.btnPDF.Location = new System.Drawing.Point(806, 246);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(123, 38);
             this.btnPDF.TabIndex = 53;
@@ -126,7 +126,7 @@
             // 
             // cbOnay
             // 
-            this.cbOnay.Location = new System.Drawing.Point(716, 141);
+            this.cbOnay.Location = new System.Drawing.Point(719, 169);
             this.cbOnay.Name = "cbOnay";
             this.cbOnay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -140,7 +140,7 @@
             // 
             // cbUrun
             // 
-            this.cbUrun.Location = new System.Drawing.Point(425, 118);
+            this.cbUrun.Location = new System.Drawing.Point(428, 146);
             this.cbUrun.Name = "cbUrun";
             this.cbUrun.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -180,14 +180,14 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(13, 28);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 47;
             this.label10.Text = "Plaka";
             // 
             // datePoliceBitis
             // 
             this.datePoliceBitis.EditValue = null;
-            this.datePoliceBitis.Location = new System.Drawing.Point(716, 118);
+            this.datePoliceBitis.Location = new System.Drawing.Point(719, 146);
             this.datePoliceBitis.Name = "datePoliceBitis";
             this.datePoliceBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -201,7 +201,7 @@
             // datePoliceBaslangic
             // 
             this.datePoliceBaslangic.EditValue = null;
-            this.datePoliceBaslangic.Location = new System.Drawing.Point(716, 95);
+            this.datePoliceBaslangic.Location = new System.Drawing.Point(719, 123);
             this.datePoliceBaslangic.Name = "datePoliceBaslangic";
             this.datePoliceBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -215,7 +215,7 @@
             // dateTeklifTarihi
             // 
             this.dateTeklifTarihi.EditValue = null;
-            this.dateTeklifTarihi.Location = new System.Drawing.Point(425, 141);
+            this.dateTeklifTarihi.Location = new System.Drawing.Point(428, 169);
             this.dateTeklifTarihi.Name = "dateTeklifTarihi";
             this.dateTeklifTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -228,7 +228,7 @@
             // 
             // txtBelgeNo
             // 
-            this.txtBelgeNo.Location = new System.Drawing.Point(425, 95);
+            this.txtBelgeNo.Location = new System.Drawing.Point(428, 123);
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
             this.txtBelgeNo.TabIndex = 42;
@@ -236,7 +236,7 @@
             // 
             // txtPlaka
             // 
-            this.txtPlaka.Location = new System.Drawing.Point(184, 145);
+            this.txtPlaka.Location = new System.Drawing.Point(187, 173);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlaka.Size = new System.Drawing.Size(100, 20);
@@ -245,7 +245,7 @@
             // dateDt
             // 
             this.dateDt.EditValue = null;
-            this.dateDt.Location = new System.Drawing.Point(184, 118);
+            this.dateDt.Location = new System.Drawing.Point(187, 146);
             this.dateDt.Name = "dateDt";
             this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -258,7 +258,7 @@
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(184, 95);
+            this.txtTC.Location = new System.Drawing.Point(187, 123);
             this.txtTC.Name = "txtTC";
             this.txtTC.Properties.MaxLength = 11;
             this.txtTC.Size = new System.Drawing.Size(100, 20);
@@ -268,34 +268,34 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(593, 144);
+            this.label9.Location = new System.Drawing.Point(596, 172);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 13);
+            this.label9.Size = new System.Drawing.Size(75, 13);
             this.label9.TabIndex = 38;
             this.label9.Text = "Onay Durumu:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(593, 121);
+            this.label8.Location = new System.Drawing.Point(596, 149);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
+            this.label8.Size = new System.Drawing.Size(90, 13);
             this.label8.TabIndex = 37;
             this.label8.Text = "Poliçe Bitiş Tarihi:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(593, 98);
+            this.label7.Location = new System.Drawing.Point(596, 126);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 13);
+            this.label7.Size = new System.Drawing.Size(117, 13);
             this.label7.TabIndex = 36;
             this.label7.Text = "Poliçe Başlangıç Tarihi:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(355, 145);
+            this.label6.Location = new System.Drawing.Point(358, 173);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 35;
@@ -304,34 +304,34 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(355, 121);
+            this.label5.Location = new System.Drawing.Point(358, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(33, 13);
             this.label5.TabIndex = 34;
             this.label5.Text = "Ürün:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(355, 98);
+            this.label4.Location = new System.Drawing.Point(358, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 33;
             this.label4.Text = "Belge No:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(107, 145);
+            this.label3.Location = new System.Drawing.Point(110, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 32;
             this.label3.Text = "Plaka:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(107, 121);
+            this.label2.Location = new System.Drawing.Point(110, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 31;
@@ -340,16 +340,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(107, 98);
+            this.label1.Location = new System.Drawing.Point(110, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 30;
             this.label1.Text = "TC Kimlik No:";
             // 
             // btnAdd
             // 
             this.btnAdd.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.add_16x16;
-            this.btnAdd.Location = new System.Drawing.Point(425, 179);
+            this.btnAdd.Location = new System.Drawing.Point(428, 207);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 31);
             this.btnAdd.TabIndex = 29;
@@ -380,76 +380,11 @@
             this.policeBitis,
             this.onay});
             this.advancedDataGridView1.DateWithTime = false;
-            this.advancedDataGridView1.Location = new System.Drawing.Point(0, 262);
+            this.advancedDataGridView1.Location = new System.Drawing.Point(0, 304);
             this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(949, 448);
-            this.advancedDataGridView1.TabIndex = 53;
+            this.advancedDataGridView1.Size = new System.Drawing.Size(947, 350);
+            this.advancedDataGridView1.TabIndex = 55;
             this.advancedDataGridView1.TimeFilter = false;
-            this.advancedDataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.advancedDataGridView1_CellFormatting);
-            // 
-            // onay
-            // 
-            this.onay.HeaderText = "Onay Durumu";
-            this.onay.MinimumWidth = 22;
-            this.onay.Name = "onay";
-            this.onay.ReadOnly = true;
-            this.onay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // policeBitis
-            // 
-            this.policeBitis.HeaderText = "Poliçe Bitiş";
-            this.policeBitis.MinimumWidth = 22;
-            this.policeBitis.Name = "policeBitis";
-            this.policeBitis.ReadOnly = true;
-            this.policeBitis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // policeBaslangic
-            // 
-            this.policeBaslangic.HeaderText = "Poliçe Başlangıç";
-            this.policeBaslangic.MinimumWidth = 22;
-            this.policeBaslangic.Name = "policeBaslangic";
-            this.policeBaslangic.ReadOnly = true;
-            this.policeBaslangic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // teklif_tarihi
-            // 
-            this.teklif_tarihi.HeaderText = "Teklif Tarihi";
-            this.teklif_tarihi.MinimumWidth = 22;
-            this.teklif_tarihi.Name = "teklif_tarihi";
-            this.teklif_tarihi.ReadOnly = true;
-            this.teklif_tarihi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // urun_
-            // 
-            this.urun_.HeaderText = "Ürün";
-            this.urun_.MinimumWidth = 22;
-            this.urun_.Name = "urun_";
-            this.urun_.ReadOnly = true;
-            this.urun_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // belge_no
-            // 
-            this.belge_no.HeaderText = "Belge No";
-            this.belge_no.MinimumWidth = 22;
-            this.belge_no.Name = "belge_no";
-            this.belge_no.ReadOnly = true;
-            this.belge_no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // plakaa
-            // 
-            this.plakaa.HeaderText = "Plaka";
-            this.plakaa.MinimumWidth = 22;
-            this.plakaa.Name = "plakaa";
-            this.plakaa.ReadOnly = true;
-            this.plakaa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dogumTarihi
-            // 
-            this.dogumTarihi.HeaderText = "Doğum Tarihi";
-            this.dogumTarihi.MinimumWidth = 22;
-            this.dogumTarihi.Name = "dogumTarihi";
-            this.dogumTarihi.ReadOnly = true;
-            this.dogumTarihi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // tcNo
             // 
@@ -459,15 +394,79 @@
             this.tcNo.ReadOnly = true;
             this.tcNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // dogumTarihi
+            // 
+            this.dogumTarihi.HeaderText = "Doğum Tarihi";
+            this.dogumTarihi.MinimumWidth = 22;
+            this.dogumTarihi.Name = "dogumTarihi";
+            this.dogumTarihi.ReadOnly = true;
+            this.dogumTarihi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // plakaa
+            // 
+            this.plakaa.HeaderText = "Plaka";
+            this.plakaa.MinimumWidth = 22;
+            this.plakaa.Name = "plakaa";
+            this.plakaa.ReadOnly = true;
+            this.plakaa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // belge_no
+            // 
+            this.belge_no.HeaderText = "Belge No";
+            this.belge_no.MinimumWidth = 22;
+            this.belge_no.Name = "belge_no";
+            this.belge_no.ReadOnly = true;
+            this.belge_no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // urun_
+            // 
+            this.urun_.HeaderText = "Ürün";
+            this.urun_.MinimumWidth = 22;
+            this.urun_.Name = "urun_";
+            this.urun_.ReadOnly = true;
+            this.urun_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // teklif_tarihi
+            // 
+            this.teklif_tarihi.HeaderText = "Teklif Tarihi";
+            this.teklif_tarihi.MinimumWidth = 22;
+            this.teklif_tarihi.Name = "teklif_tarihi";
+            this.teklif_tarihi.ReadOnly = true;
+            this.teklif_tarihi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // policeBaslangic
+            // 
+            this.policeBaslangic.HeaderText = "Poliçe Başlangıç";
+            this.policeBaslangic.MinimumWidth = 22;
+            this.policeBaslangic.Name = "policeBaslangic";
+            this.policeBaslangic.ReadOnly = true;
+            this.policeBaslangic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // policeBitis
+            // 
+            this.policeBitis.HeaderText = "Poliçe Bitiş";
+            this.policeBitis.MinimumWidth = 22;
+            this.policeBitis.Name = "policeBitis";
+            this.policeBitis.ReadOnly = true;
+            this.policeBitis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // onay
+            // 
+            this.onay.HeaderText = "Onay Durumu";
+            this.onay.MinimumWidth = 22;
+            this.onay.Name = "onay";
+            this.onay.ReadOnly = true;
+            this.onay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 711);
+            this.ClientSize = new System.Drawing.Size(956, 661);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Poliçe Sorgu";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

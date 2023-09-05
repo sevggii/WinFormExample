@@ -325,5 +325,32 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void advancedDataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                e.PaintBackground(e.ClipBounds, true);
+
+                // header background color 
+                Color myBlueColor = ColorTranslator.FromHtml("#29BAD7");
+                using (Brush brush = new SolidBrush(myBlueColor))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
+
+                // header text color
+                using (Brush textBrush = new SolidBrush(Color.White))
+                {
+                    StringFormat sf = new StringFormat();
+                    sf.Alignment = StringAlignment.Near; // Left
+                    sf.LineAlignment = StringAlignment.Center;
+                    e.Graphics.DrawString(e.Value.ToString(), e.CellStyle.Font, textBrush, e.CellBounds, sf);
+                }
+
+                e.Handled = true;
+            }
+        }
+
+
     }
 }
