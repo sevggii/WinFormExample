@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
 
         private void btnPlakaSorgu_Click(object sender, EventArgs e)
         {
-            LoadDataGridViewDataByPlaka(txtPlakaSorgu.Text);//fhgfhg
+            LoadDataGridViewDataByPlaka(txtPlakaSorgu.Text);
         }
 
         private void LoadDataGridViewData()
