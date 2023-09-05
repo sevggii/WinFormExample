@@ -1,4 +1,5 @@
 DevExpress
 
-![image](https://github.com/sevgitr/WindowsFormsApp1/assets/49620686/8f928258-1b20-4e0c-9900-b70a6a4ec78b)
+![image](https://github.com/sevgitr/WindowsFormsApp1/assets/49620686/509d745b-c5d6-43b6-b33e-dde32f400daa)
+
 
