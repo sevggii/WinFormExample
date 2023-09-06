@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
+            this.tcNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogumTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plakaa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.belge_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urun_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teklif_tarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.policeBaslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.policeBitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPDF = new DevExpress.XtraEditors.SimpleButton();
             this.cbOnay = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbUrun = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -52,18 +62,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
-            this.tcNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dogumTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plakaa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.belge_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urun_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teklif_tarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.policeBaslangic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.policeBitis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbOnay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbUrun.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlakaSorgu.Properties)).BeginInit();
@@ -78,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -113,6 +113,110 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(941, 554);
             this.panelControl1.TabIndex = 0;
+            // 
+            // advancedDataGridView1
+            // 
+            this.advancedDataGridView1.AllowUserToAddRows = false;
+            this.advancedDataGridView1.AllowUserToDeleteRows = false;
+            this.advancedDataGridView1.AllowUserToResizeColumns = false;
+            this.advancedDataGridView1.AllowUserToResizeRows = false;
+            this.advancedDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.advancedDataGridView1.AutoGenerateContextFilters = true;
+            this.advancedDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.advancedDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.advancedDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.advancedDataGridView1.ColumnHeadersHeight = 24;
+            this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tcNo,
+            this.dogumTarihi,
+            this.plakaa,
+            this.belge_no,
+            this.urun_,
+            this.teklif_tarihi,
+            this.policeBaslangic,
+            this.policeBitis,
+            this.onay});
+            this.advancedDataGridView1.DateWithTime = false;
+            this.advancedDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.advancedDataGridView1.Location = new System.Drawing.Point(0, 304);
+            this.advancedDataGridView1.Name = "advancedDataGridView1";
+            this.advancedDataGridView1.Size = new System.Drawing.Size(947, 350);
+            this.advancedDataGridView1.TabIndex = 55;
+            this.advancedDataGridView1.TimeFilter = false;
+            // 
+            // tcNo
+            // 
+            this.tcNo.HeaderText = "TC Kimlik No";
+            this.tcNo.MinimumWidth = 22;
+            this.tcNo.Name = "tcNo";
+            this.tcNo.ReadOnly = true;
+            this.tcNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dogumTarihi
+            // 
+            this.dogumTarihi.HeaderText = "Doğum Tarihi";
+            this.dogumTarihi.MinimumWidth = 22;
+            this.dogumTarihi.Name = "dogumTarihi";
+            this.dogumTarihi.ReadOnly = true;
+            this.dogumTarihi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // plakaa
+            // 
+            this.plakaa.HeaderText = "Plaka";
+            this.plakaa.MinimumWidth = 22;
+            this.plakaa.Name = "plakaa";
+            this.plakaa.ReadOnly = true;
+            this.plakaa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // belge_no
+            // 
+            this.belge_no.HeaderText = "Belge No";
+            this.belge_no.MinimumWidth = 22;
+            this.belge_no.Name = "belge_no";
+            this.belge_no.ReadOnly = true;
+            this.belge_no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // urun_
+            // 
+            this.urun_.HeaderText = "Ürün";
+            this.urun_.MinimumWidth = 22;
+            this.urun_.Name = "urun_";
+            this.urun_.ReadOnly = true;
+            this.urun_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // teklif_tarihi
+            // 
+            this.teklif_tarihi.HeaderText = "Teklif Tarihi";
+            this.teklif_tarihi.MinimumWidth = 22;
+            this.teklif_tarihi.Name = "teklif_tarihi";
+            this.teklif_tarihi.ReadOnly = true;
+            this.teklif_tarihi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // policeBaslangic
+            // 
+            this.policeBaslangic.HeaderText = "Poliçe Başlangıç";
+            this.policeBaslangic.MinimumWidth = 22;
+            this.policeBaslangic.Name = "policeBaslangic";
+            this.policeBaslangic.ReadOnly = true;
+            this.policeBaslangic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // policeBitis
+            // 
+            this.policeBitis.HeaderText = "Poliçe Bitiş";
+            this.policeBitis.MinimumWidth = 22;
+            this.policeBitis.Name = "policeBitis";
+            this.policeBitis.ReadOnly = true;
+            this.policeBitis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // onay
+            // 
+            this.onay.HeaderText = "Onay Durumu";
+            this.onay.MinimumWidth = 22;
+            this.onay.Name = "onay";
+            this.onay.ReadOnly = true;
+            this.onay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // btnPDF
             // 
@@ -356,110 +460,6 @@
             this.btnAdd.Text = "KAYIT EKLE";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // advancedDataGridView1
-            // 
-            this.advancedDataGridView1.AllowUserToAddRows = false;
-            this.advancedDataGridView1.AllowUserToDeleteRows = false;
-            this.advancedDataGridView1.AllowUserToResizeColumns = false;
-            this.advancedDataGridView1.AllowUserToResizeRows = false;
-            this.advancedDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.advancedDataGridView1.AutoGenerateContextFilters = true;
-            this.advancedDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.advancedDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.advancedDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.advancedDataGridView1.ColumnHeadersHeight = 20;
-            this.advancedDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tcNo,
-            this.dogumTarihi,
-            this.plakaa,
-            this.belge_no,
-            this.urun_,
-            this.teklif_tarihi,
-            this.policeBaslangic,
-            this.policeBitis,
-            this.onay});
-            this.advancedDataGridView1.DateWithTime = false;
-            this.advancedDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.advancedDataGridView1.Location = new System.Drawing.Point(0, 304);
-            this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(947, 350);
-            this.advancedDataGridView1.TabIndex = 55;
-            this.advancedDataGridView1.TimeFilter = false;
-            // 
-            // tcNo
-            // 
-            this.tcNo.HeaderText = "TC Kimlik No";
-            this.tcNo.MinimumWidth = 22;
-            this.tcNo.Name = "tcNo";
-            this.tcNo.ReadOnly = true;
-            this.tcNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dogumTarihi
-            // 
-            this.dogumTarihi.HeaderText = "Doğum Tarihi";
-            this.dogumTarihi.MinimumWidth = 22;
-            this.dogumTarihi.Name = "dogumTarihi";
-            this.dogumTarihi.ReadOnly = true;
-            this.dogumTarihi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // plakaa
-            // 
-            this.plakaa.HeaderText = "Plaka";
-            this.plakaa.MinimumWidth = 22;
-            this.plakaa.Name = "plakaa";
-            this.plakaa.ReadOnly = true;
-            this.plakaa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // belge_no
-            // 
-            this.belge_no.HeaderText = "Belge No";
-            this.belge_no.MinimumWidth = 22;
-            this.belge_no.Name = "belge_no";
-            this.belge_no.ReadOnly = true;
-            this.belge_no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // urun_
-            // 
-            this.urun_.HeaderText = "Ürün";
-            this.urun_.MinimumWidth = 22;
-            this.urun_.Name = "urun_";
-            this.urun_.ReadOnly = true;
-            this.urun_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // teklif_tarihi
-            // 
-            this.teklif_tarihi.HeaderText = "Teklif Tarihi";
-            this.teklif_tarihi.MinimumWidth = 22;
-            this.teklif_tarihi.Name = "teklif_tarihi";
-            this.teklif_tarihi.ReadOnly = true;
-            this.teklif_tarihi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // policeBaslangic
-            // 
-            this.policeBaslangic.HeaderText = "Poliçe Başlangıç";
-            this.policeBaslangic.MinimumWidth = 22;
-            this.policeBaslangic.Name = "policeBaslangic";
-            this.policeBaslangic.ReadOnly = true;
-            this.policeBaslangic.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // policeBitis
-            // 
-            this.policeBitis.HeaderText = "Poliçe Bitiş";
-            this.policeBitis.MinimumWidth = 22;
-            this.policeBitis.Name = "policeBitis";
-            this.policeBitis.ReadOnly = true;
-            this.policeBitis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // onay
-            // 
-            this.onay.HeaderText = "Onay Durumu";
-            this.onay.MinimumWidth = 22;
-            this.onay.Name = "onay";
-            this.onay.ReadOnly = true;
-            this.onay.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbOnay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbUrun.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlakaSorgu.Properties)).EndInit();
@@ -488,7 +489,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
