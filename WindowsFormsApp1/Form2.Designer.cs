@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
             this.tcNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,9 +110,9 @@
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.btnAdd);
-            this.panelControl1.Location = new System.Drawing.Point(1, 2);
+            this.panelControl1.Location = new System.Drawing.Point(13, 16);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(941, 554);
+            this.panelControl1.Size = new System.Drawing.Size(1024, 554);
             this.panelControl1.TabIndex = 0;
             // 
             // advancedDataGridView1
@@ -139,10 +140,18 @@
             this.policeBitis,
             this.onay});
             this.advancedDataGridView1.DateWithTime = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.advancedDataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.advancedDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.advancedDataGridView1.Location = new System.Drawing.Point(0, 304);
             this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(947, 350);
+            this.advancedDataGridView1.Size = new System.Drawing.Size(1030, 350);
             this.advancedDataGridView1.TabIndex = 55;
             this.advancedDataGridView1.TimeFilter = false;
             this.advancedDataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.advancedDataGridView1_CellFormatting);
@@ -285,7 +294,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(43, 47);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.Size = new System.Drawing.Size(32, 13);
             this.label10.TabIndex = 47;
             this.label10.Text = "Plaka";
             // 
@@ -375,7 +384,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(610, 188);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
+            this.label9.Size = new System.Drawing.Size(77, 13);
             this.label9.TabIndex = 38;
             this.label9.Text = "Onay Durumu:";
             // 
@@ -384,7 +393,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(610, 165);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 13);
+            this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 37;
             this.label8.Text = "Poliçe Bitiş Tarihi:";
             // 
@@ -393,7 +402,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(610, 142);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.Size = new System.Drawing.Size(114, 13);
             this.label7.TabIndex = 36;
             this.label7.Text = "Poliçe Başlangıç Tarihi:";
             // 
@@ -411,7 +420,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(372, 165);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 34;
             this.label5.Text = "Ürün:";
             // 
@@ -420,7 +429,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(372, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 33;
             this.label4.Text = "Belge No:";
             // 
@@ -429,7 +438,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(124, 189);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 32;
             this.label3.Text = "Plaka:";
             // 
@@ -447,7 +456,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(124, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 30;
             this.label1.Text = "TC Kimlik No:";
             // 
@@ -465,12 +474,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 661);
+            this.ClientSize = new System.Drawing.Size(1030, 662);
             this.Controls.Add(this.panelControl1);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Poliçe Sorgu";
+            this.Text = "Poliçe Sorgulama";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

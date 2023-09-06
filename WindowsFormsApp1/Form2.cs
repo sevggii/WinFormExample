@@ -107,7 +107,6 @@ namespace WindowsFormsApp1
                                    "ORDER BY policeBaslangic DESC";
 
 
-
                     MySqlCommand command = new MySqlCommand(query, connection);
                     command.Parameters.AddWithValue("@plakaFilter", plaka + "%");
 
