@@ -221,7 +221,7 @@
             // btnPDF
             // 
             this.btnPDF.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.printviapdf_32x32;
-            this.btnPDF.Location = new System.Drawing.Point(804, 250);
+            this.btnPDF.Location = new System.Drawing.Point(804, 260);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(123, 38);
             this.btnPDF.TabIndex = 53;
