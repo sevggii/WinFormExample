@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             advancedDataGridView1.Rows.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu FROM policycheck";
+                string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu FROM policycheck ORDER BY policeBaslangic DESC";
 
                 MySqlCommand command = new MySqlCommand(query, connection);
 
@@ -91,6 +91,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
 
         private void LoadDataGridViewDataByPlaka(string plaka)
         {
@@ -290,11 +291,52 @@ namespace WindowsFormsApp1
             }
         }
 
-
         private void advancedDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-           
-            if (e.ColumnIndex == 6 || e.ColumnIndex == 6)
+
+            if (e.ColumnIndex == 1 || e.ColumnIndex == 1) //dogumTarihi
+            {
+                if (e.Value != null && e.Value != DBNull.Value)
+                {
+                    if (e.Value is DateTime)
+                    {
+                        DateTime dateTime = (DateTime)e.Value;
+                        e.Value = dateTime.ToString("dd/MM/yyyy");
+                        e.FormattingApplied = true;
+                    }
+                }
+            }
+
+
+            if (e.ColumnIndex == 5 || e.ColumnIndex == 5) //teklifTarihi
+            {
+                if (e.Value != null && e.Value != DBNull.Value)
+                {
+                    if (e.Value is DateTime)
+                    {
+                        DateTime dateTime = (DateTime)e.Value;
+                        e.Value = dateTime.ToString("dd/MM/yyyy");
+                        e.FormattingApplied = true;
+                    }
+                }
+            }
+
+
+            if (e.ColumnIndex == 6 || e.ColumnIndex == 6) //policeBaslangic
+            {
+                if (e.Value != null && e.Value != DBNull.Value)
+                {
+                    if (e.Value is DateTime)
+                    {
+                        DateTime dateTime = (DateTime)e.Value;
+                        e.Value = dateTime.ToString("dd/MM/yyyy");
+                        e.FormattingApplied = true;
+                    }
+                }
+            }
+
+
+            if (e.ColumnIndex == 7 || e.ColumnIndex == 7) //policeBitis
             {
                 if (e.Value != null && e.Value != DBNull.Value)
                 {
@@ -324,33 +366,6 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
-
-        private void advancedDataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
-            {
-                e.PaintBackground(e.ClipBounds, true);
-
-                // header background color 
-                Color myBlueColor = ColorTranslator.FromHtml("#29BAD7");
-                using (Brush brush = new SolidBrush(myBlueColor))
-                {
-                    e.Graphics.FillRectangle(brush, e.CellBounds);
-                }
-
-                // header text color
-                using (Brush textBrush = new SolidBrush(Color.White))
-                {
-                    StringFormat sf = new StringFormat();
-                    sf.Alignment = StringAlignment.Near; // Left
-                    sf.LineAlignment = StringAlignment.Center;
-                    e.Graphics.DrawString(e.Value.ToString(), e.CellStyle.Font, textBrush, e.CellBounds, sf);
-                }
-
-                e.Handled = true;
-            }
-        }
-
 
     }
 }

@@ -145,6 +145,7 @@
             this.advancedDataGridView1.Size = new System.Drawing.Size(947, 350);
             this.advancedDataGridView1.TabIndex = 55;
             this.advancedDataGridView1.TimeFilter = false;
+            this.advancedDataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.advancedDataGridView1_CellFormatting);
             // 
             // tcNo
             // 
