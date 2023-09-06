@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
@@ -63,6 +64,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.toolbarFormManager1 = new DevExpress.XtraBars.ToolbarForm.ToolbarFormManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
@@ -80,11 +86,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.advancedDataGridView1);
             this.panelControl1.Controls.Add(this.btnPDF);
@@ -110,7 +119,7 @@
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.btnAdd);
-            this.panelControl1.Location = new System.Drawing.Point(1, 6);
+            this.panelControl1.Location = new System.Drawing.Point(-12, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(944, 643);
             this.panelControl1.TabIndex = 0;
@@ -143,7 +152,7 @@
             this.advancedDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.advancedDataGridView1.Location = new System.Drawing.Point(0, 304);
             this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(944, 322);
+            this.advancedDataGridView1.Size = new System.Drawing.Size(944, 339);
             this.advancedDataGridView1.TabIndex = 55;
             this.advancedDataGridView1.TimeFilter = false;
             this.advancedDataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.advancedDataGridView1_CellFormatting);
@@ -223,16 +232,16 @@
             // btnPDF
             // 
             this.btnPDF.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.printviapdf_32x32;
-            this.btnPDF.Location = new System.Drawing.Point(861, 261);
+            this.btnPDF.Location = new System.Drawing.Point(856, 260);
             this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(80, 37);
+            this.btnPDF.Size = new System.Drawing.Size(85, 38);
             this.btnPDF.TabIndex = 53;
-            this.btnPDF.Text = "PDF";
+            this.btnPDF.Text = "PDF AL";
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // cbOnay
             // 
-            this.cbOnay.Location = new System.Drawing.Point(776, 153);
+            this.cbOnay.Location = new System.Drawing.Point(771, 173);
             this.cbOnay.Name = "cbOnay";
             this.cbOnay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -246,7 +255,7 @@
             // 
             // cbUrun
             // 
-            this.cbUrun.Location = new System.Drawing.Point(461, 130);
+            this.cbUrun.Location = new System.Drawing.Point(456, 150);
             this.cbUrun.Name = "cbUrun";
             this.cbUrun.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -265,15 +274,16 @@
             // btnPlakaSorgu
             // 
             this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(233, 56);
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(234, 76);
             this.btnPlakaSorgu.Name = "btnPlakaSorgu";
-            this.btnPlakaSorgu.Size = new System.Drawing.Size(22, 20);
+            this.btnPlakaSorgu.Size = new System.Drawing.Size(73, 20);
             this.btnPlakaSorgu.TabIndex = 49;
+            this.btnPlakaSorgu.Text = "SORGULA";
             this.btnPlakaSorgu.Click += new System.EventHandler(this.btnPlakaSorgu_Click);
             // 
             // txtPlakaSorgu
             // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(133, 56);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(128, 76);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
             this.txtPlakaSorgu.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
@@ -283,7 +293,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(71, 59);
+            this.label10.Location = new System.Drawing.Point(66, 79);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 13);
             this.label10.TabIndex = 47;
@@ -292,7 +302,7 @@
             // datePoliceBitis
             // 
             this.datePoliceBitis.EditValue = null;
-            this.datePoliceBitis.Location = new System.Drawing.Point(776, 130);
+            this.datePoliceBitis.Location = new System.Drawing.Point(771, 150);
             this.datePoliceBitis.Name = "datePoliceBitis";
             this.datePoliceBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -306,7 +316,7 @@
             // datePoliceBaslangic
             // 
             this.datePoliceBaslangic.EditValue = null;
-            this.datePoliceBaslangic.Location = new System.Drawing.Point(776, 107);
+            this.datePoliceBaslangic.Location = new System.Drawing.Point(771, 127);
             this.datePoliceBaslangic.Name = "datePoliceBaslangic";
             this.datePoliceBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -320,7 +330,7 @@
             // dateTeklifTarihi
             // 
             this.dateTeklifTarihi.EditValue = null;
-            this.dateTeklifTarihi.Location = new System.Drawing.Point(461, 153);
+            this.dateTeklifTarihi.Location = new System.Drawing.Point(456, 173);
             this.dateTeklifTarihi.Name = "dateTeklifTarihi";
             this.dateTeklifTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -333,7 +343,7 @@
             // 
             // txtBelgeNo
             // 
-            this.txtBelgeNo.Location = new System.Drawing.Point(461, 107);
+            this.txtBelgeNo.Location = new System.Drawing.Point(456, 127);
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
             this.txtBelgeNo.TabIndex = 42;
@@ -341,7 +351,7 @@
             // 
             // txtPlaka
             // 
-            this.txtPlaka.Location = new System.Drawing.Point(194, 153);
+            this.txtPlaka.Location = new System.Drawing.Point(189, 173);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlaka.Size = new System.Drawing.Size(100, 20);
@@ -350,7 +360,7 @@
             // dateDt
             // 
             this.dateDt.EditValue = null;
-            this.dateDt.Location = new System.Drawing.Point(194, 130);
+            this.dateDt.Location = new System.Drawing.Point(189, 150);
             this.dateDt.Name = "dateDt";
             this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -363,7 +373,7 @@
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(194, 107);
+            this.txtTC.Location = new System.Drawing.Point(189, 127);
             this.txtTC.Name = "txtTC";
             this.txtTC.Properties.MaxLength = 11;
             this.txtTC.Size = new System.Drawing.Size(100, 20);
@@ -373,7 +383,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(634, 153);
+            this.label9.Location = new System.Drawing.Point(629, 173);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 13);
             this.label9.TabIndex = 38;
@@ -382,7 +392,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(634, 130);
+            this.label8.Location = new System.Drawing.Point(629, 150);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 37;
@@ -391,7 +401,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(634, 107);
+            this.label7.Location = new System.Drawing.Point(629, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 13);
             this.label7.TabIndex = 36;
@@ -400,7 +410,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(365, 153);
+            this.label6.Location = new System.Drawing.Point(360, 173);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 35;
@@ -409,7 +419,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(365, 130);
+            this.label5.Location = new System.Drawing.Point(360, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 34;
@@ -418,7 +428,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(365, 107);
+            this.label4.Location = new System.Drawing.Point(360, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 33;
@@ -427,7 +437,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 153);
+            this.label3.Location = new System.Drawing.Point(66, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 32;
@@ -436,7 +446,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 130);
+            this.label2.Location = new System.Drawing.Point(66, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 31;
@@ -445,7 +455,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 107);
+            this.label1.Location = new System.Drawing.Point(66, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 30;
@@ -454,26 +464,72 @@
             // btnAdd
             // 
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(461, 190);
+            this.btnAdd.Location = new System.Drawing.Point(456, 199);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.btnAdd.Size = new System.Drawing.Size(100, 43);
+            this.btnAdd.Size = new System.Drawing.Size(100, 37);
             this.btnAdd.TabIndex = 29;
             this.btnAdd.Text = "KAYIT EKLE";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // toolbarFormManager1
+            // 
+            this.toolbarFormManager1.DockControls.Add(this.barDockControlTop);
+            this.toolbarFormManager1.DockControls.Add(this.barDockControlBottom);
+            this.toolbarFormManager1.DockControls.Add(this.barDockControlLeft);
+            this.toolbarFormManager1.DockControls.Add(this.barDockControlRight);
+            this.toolbarFormManager1.Form = this;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.toolbarFormManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(931, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 654);
+            this.barDockControlBottom.Manager = this.toolbarFormManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(931, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.toolbarFormManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 654);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(931, 0);
+            this.barDockControlRight.Manager = this.toolbarFormManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 654);
+            // 
             // Form2
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 661);
+            this.ClientSize = new System.Drawing.Size(931, 654);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Form2.IconOptions.LargeImage")));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Poliçe Sorgulama";
+            this.Text = "Sorgulama Ekranı";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -493,7 +549,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -533,5 +591,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn policeBaslangic;
         private System.Windows.Forms.DataGridViewTextBoxColumn policeBitis;
         private System.Windows.Forms.DataGridViewTextBoxColumn onay;
+        private DevExpress.XtraBars.ToolbarForm.ToolbarFormManager toolbarFormManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
     }
 }
