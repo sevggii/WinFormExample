@@ -102,8 +102,9 @@ namespace WindowsFormsApp1
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
-                                   "FROM policycheck " +
-                                   "WHERE plaka LIKE @plakaFilter";
+                        "FROM policycheck ORDER BY policeBaslangic DESC " +
+                        "WHERE plaka LIKE @plakaFilter";
+
 
                     MySqlCommand command = new MySqlCommand(query, connection);
                     command.Parameters.AddWithValue("@plakaFilter", plaka + "%");
@@ -227,7 +228,7 @@ namespace WindowsFormsApp1
                             document.Open();
 
                             PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
-                            pTable.WidthPercentage = 100; 
+                            pTable.WidthPercentage = 100;
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
                             string fontPath = "C:\\Windows\\Fonts\\arial.ttf";
@@ -235,7 +236,7 @@ namespace WindowsFormsApp1
 
                             iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL, iTextSharp.text.BaseColor.BLACK);
 
-                            pTable.SpacingBefore = 10f; 
+                            pTable.SpacingBefore = 10f;
                             pTable.SpacingAfter = 10f;
 
                             foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
@@ -245,7 +246,7 @@ namespace WindowsFormsApp1
                                 pCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                                 pCell.PaddingTop = 10f;
                                 pCell.PaddingBottom = 10f;
-                                pCell.Border = PdfPCell.BOTTOM_BORDER; 
+                                pCell.Border = PdfPCell.BOTTOM_BORDER;
                                 pTable.AddCell(pCell);
                             }
 
@@ -253,13 +254,26 @@ namespace WindowsFormsApp1
                             {
                                 foreach (DataGridViewCell dcell in viewRow.Cells)
                                 {
-                                    string cellValue = dcell.Value != null ? dcell.Value.ToString() : "";
+                                    string cellValue = "";
+                                    if (dcell.Value != null)
+                                    {
+                                        if (dcell.Value is DateTime)
+                                        {
+                                            DateTime dateTime = (DateTime)dcell.Value;
+                                            cellValue = dateTime.ToString("dd/MM/yyyy");
+                                        }
+                                        else
+                                        {
+                                            cellValue = dcell.Value.ToString();
+                                        }
+                                    }
+
                                     PdfPCell cell = new PdfPCell(new Phrase(cellValue, font));
-                                    cell.HorizontalAlignment = Element.ALIGN_LEFT; 
+                                    cell.HorizontalAlignment = Element.ALIGN_LEFT;
                                     cell.VerticalAlignment = Element.ALIGN_MIDDLE;
                                     cell.PaddingTop = 10f;
                                     cell.PaddingBottom = 10f;
-                                    cell.Border = PdfPCell.BOTTOM_BORDER; 
+                                    cell.Border = PdfPCell.BOTTOM_BORDER;
                                     pTable.AddCell(cell);
                                 }
                             }
@@ -290,6 +304,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Kayıt Bulunamadı", "Bilgi");
             }
         }
+
 
         private void advancedDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
