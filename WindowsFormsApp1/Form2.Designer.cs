@@ -110,9 +110,9 @@
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.btnAdd);
-            this.panelControl1.Location = new System.Drawing.Point(14, 16);
+            this.panelControl1.Location = new System.Drawing.Point(1, 6);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1024, 554);
+            this.panelControl1.Size = new System.Drawing.Size(944, 643);
             this.panelControl1.TabIndex = 0;
             // 
             // advancedDataGridView1
@@ -141,9 +141,9 @@
             this.onay});
             this.advancedDataGridView1.DateWithTime = false;
             this.advancedDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.advancedDataGridView1.Location = new System.Drawing.Point(-26, 304);
+            this.advancedDataGridView1.Location = new System.Drawing.Point(0, 304);
             this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(941, 349);
+            this.advancedDataGridView1.Size = new System.Drawing.Size(944, 322);
             this.advancedDataGridView1.TabIndex = 55;
             this.advancedDataGridView1.TimeFilter = false;
             this.advancedDataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.advancedDataGridView1_CellFormatting);
@@ -223,16 +223,16 @@
             // btnPDF
             // 
             this.btnPDF.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.printviapdf_32x32;
-            this.btnPDF.Location = new System.Drawing.Point(922, 304);
+            this.btnPDF.Location = new System.Drawing.Point(861, 261);
             this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(82, 37);
+            this.btnPDF.Size = new System.Drawing.Size(80, 37);
             this.btnPDF.TabIndex = 53;
-            this.btnPDF.Text = "PDF AL";
+            this.btnPDF.Text = "PDF";
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // cbOnay
             // 
-            this.cbOnay.Location = new System.Drawing.Point(734, 185);
+            this.cbOnay.Location = new System.Drawing.Point(776, 153);
             this.cbOnay.Name = "cbOnay";
             this.cbOnay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -246,7 +246,7 @@
             // 
             // cbUrun
             // 
-            this.cbUrun.Location = new System.Drawing.Point(442, 162);
+            this.cbUrun.Location = new System.Drawing.Point(461, 130);
             this.cbUrun.Name = "cbUrun";
             this.cbUrun.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -265,7 +265,7 @@
             // btnPlakaSorgu
             // 
             this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(181, 44);
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(233, 56);
             this.btnPlakaSorgu.Name = "btnPlakaSorgu";
             this.btnPlakaSorgu.Size = new System.Drawing.Size(22, 20);
             this.btnPlakaSorgu.TabIndex = 49;
@@ -273,7 +273,7 @@
             // 
             // txtPlakaSorgu
             // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(81, 44);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(133, 56);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
             this.txtPlakaSorgu.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
@@ -283,16 +283,16 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(44, 47);
+            this.label10.Location = new System.Drawing.Point(71, 59);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.Size = new System.Drawing.Size(36, 13);
             this.label10.TabIndex = 47;
-            this.label10.Text = "Plaka";
+            this.label10.Text = "Plaka:";
             // 
             // datePoliceBitis
             // 
             this.datePoliceBitis.EditValue = null;
-            this.datePoliceBitis.Location = new System.Drawing.Point(734, 162);
+            this.datePoliceBitis.Location = new System.Drawing.Point(776, 130);
             this.datePoliceBitis.Name = "datePoliceBitis";
             this.datePoliceBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -306,7 +306,7 @@
             // datePoliceBaslangic
             // 
             this.datePoliceBaslangic.EditValue = null;
-            this.datePoliceBaslangic.Location = new System.Drawing.Point(734, 140);
+            this.datePoliceBaslangic.Location = new System.Drawing.Point(776, 107);
             this.datePoliceBaslangic.Name = "datePoliceBaslangic";
             this.datePoliceBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -320,7 +320,7 @@
             // dateTeklifTarihi
             // 
             this.dateTeklifTarihi.EditValue = null;
-            this.dateTeklifTarihi.Location = new System.Drawing.Point(442, 185);
+            this.dateTeklifTarihi.Location = new System.Drawing.Point(461, 153);
             this.dateTeklifTarihi.Name = "dateTeklifTarihi";
             this.dateTeklifTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -333,7 +333,7 @@
             // 
             // txtBelgeNo
             // 
-            this.txtBelgeNo.Location = new System.Drawing.Point(442, 140);
+            this.txtBelgeNo.Location = new System.Drawing.Point(461, 107);
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
             this.txtBelgeNo.TabIndex = 42;
@@ -341,7 +341,7 @@
             // 
             // txtPlaka
             // 
-            this.txtPlaka.Location = new System.Drawing.Point(201, 188);
+            this.txtPlaka.Location = new System.Drawing.Point(194, 153);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlaka.Size = new System.Drawing.Size(100, 20);
@@ -350,7 +350,7 @@
             // dateDt
             // 
             this.dateDt.EditValue = null;
-            this.dateDt.Location = new System.Drawing.Point(201, 163);
+            this.dateDt.Location = new System.Drawing.Point(194, 130);
             this.dateDt.Name = "dateDt";
             this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -363,7 +363,7 @@
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(201, 140);
+            this.txtTC.Location = new System.Drawing.Point(194, 107);
             this.txtTC.Name = "txtTC";
             this.txtTC.Properties.MaxLength = 11;
             this.txtTC.Size = new System.Drawing.Size(100, 20);
@@ -373,7 +373,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(610, 188);
+            this.label9.Location = new System.Drawing.Point(634, 153);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 13);
             this.label9.TabIndex = 38;
@@ -382,7 +382,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(610, 166);
+            this.label8.Location = new System.Drawing.Point(634, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 37;
@@ -391,7 +391,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(610, 141);
+            this.label7.Location = new System.Drawing.Point(634, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 13);
             this.label7.TabIndex = 36;
@@ -400,7 +400,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(372, 188);
+            this.label6.Location = new System.Drawing.Point(365, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 35;
@@ -409,7 +409,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(372, 166);
+            this.label5.Location = new System.Drawing.Point(365, 130);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 34;
@@ -418,7 +418,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(372, 141);
+            this.label4.Location = new System.Drawing.Point(365, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 33;
@@ -427,7 +427,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 188);
+            this.label3.Location = new System.Drawing.Point(71, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 32;
@@ -436,7 +436,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 166);
+            this.label2.Location = new System.Drawing.Point(71, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 31;
@@ -445,7 +445,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 141);
+            this.label1.Location = new System.Drawing.Point(71, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 30;
@@ -453,10 +453,11 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.add_16x16;
-            this.btnAdd.Location = new System.Drawing.Point(442, 223);
+            this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(461, 190);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 31);
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.btnAdd.Size = new System.Drawing.Size(100, 43);
             this.btnAdd.TabIndex = 29;
             this.btnAdd.Text = "KAYIT EKLE";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -465,7 +466,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 661);
+            this.ClientSize = new System.Drawing.Size(944, 661);
             this.Controls.Add(this.panelControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
