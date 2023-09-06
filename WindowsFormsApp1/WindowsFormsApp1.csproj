@@ -490,6 +490,9 @@
     <Content Include="images\neftlogo.png" />
     <Content Include="images\query_icon_216695.ico" />
     <Content Include="images\query_icon_216695.png" />
+    <None Include="Resources\neftlogo %283%29.png" />
+    <None Include="Resources\neftlogo %282%29.png" />
+    <None Include="Resources\neftlogo1.png" />
     <None Include="Resources\neftlogo %281%29.png" />
     <None Include="Resources\neftlogo.png" />
     <None Include="Resources\contact-form %286%29.png" />

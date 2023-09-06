@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
             this.tcNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dogumTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,12 +64,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.toolbarFormManager1 = new DevExpress.XtraBars.ToolbarForm.ToolbarFormManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -129,15 +130,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(959, 397);
             this.panelControl1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.neftlogo__1_;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel3.Location = new System.Drawing.Point(0, 47);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(208, 89);
-            this.panel3.TabIndex = 56;
             // 
             // advancedDataGridView1
             // 
@@ -487,6 +479,15 @@
             this.btnAdd.Text = "KAYIT EKLE";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.neftlogo__3_;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.Location = new System.Drawing.Point(0, 47);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(208, 89);
+            this.panel3.TabIndex = 56;
+            // 
             // toolbarFormManager1
             // 
             this.toolbarFormManager1.DockControls.Add(this.barDockControlTop);
@@ -530,6 +531,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -539,6 +541,14 @@
             this.panel1.Size = new System.Drawing.Size(208, 654);
             this.panel1.TabIndex = 5;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(172)))), ((int)(((byte)(97)))));
+            this.panel4.Location = new System.Drawing.Point(0, 144);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(9, 46);
+            this.panel4.TabIndex = 56;
+            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
@@ -547,7 +557,7 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.button2.Image = global::WindowsFormsApp1.Properties.Resources.google_forms__1_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(32, 188);
+            this.button2.Location = new System.Drawing.Point(16, 188);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 46);
             this.button2.TabIndex = 8;
@@ -563,7 +573,7 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.button1.Image = global::WindowsFormsApp1.Properties.Resources.contact_form__6_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(32, 144);
+            this.button1.Location = new System.Drawing.Point(16, 144);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 46);
             this.button1.TabIndex = 7;
@@ -573,7 +583,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(172)))), ((int)(((byte)(97)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(208, 0);
             this.panel2.Name = "panel2";
@@ -672,5 +682,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
