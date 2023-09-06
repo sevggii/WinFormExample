@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
             this.tcNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dogumTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +71,7 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -123,10 +125,19 @@
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.btnAdd);
-            this.panelControl1.Location = new System.Drawing.Point(159, 12);
+            this.panelControl1.Location = new System.Drawing.Point(166, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(953, 397);
+            this.panelControl1.Size = new System.Drawing.Size(946, 397);
             this.panelControl1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.neftlogo__1_;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.Location = new System.Drawing.Point(0, 29);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(165, 53);
+            this.panel3.TabIndex = 56;
             // 
             // advancedDataGridView1
             // 
@@ -156,7 +167,7 @@
             this.advancedDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.advancedDataGridView1.Location = new System.Drawing.Point(0, 304);
             this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(953, 198);
+            this.advancedDataGridView1.Size = new System.Drawing.Size(946, 198);
             this.advancedDataGridView1.TabIndex = 55;
             this.advancedDataGridView1.TimeFilter = false;
             this.advancedDataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.advancedDataGridView1_CellFormatting);
@@ -519,34 +530,54 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(158, 654);
+            this.panel1.Size = new System.Drawing.Size(166, 654);
             this.panel1.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.google_forms__1_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(12, 132);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 46);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "  Diğer";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.button1.Image = global::WindowsFormsApp1.Properties.Resources.contact_form__5_;
+            this.button1.Image = global::WindowsFormsApp1.Properties.Resources.contact_form__6_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 62);
+            this.button1.Location = new System.Drawing.Point(12, 88);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 54);
+            this.button1.Size = new System.Drawing.Size(125, 46);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Yeni Kayıt";
+            this.button1.Text = "  Yeni Kayıt";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(158, 0);
+            this.panel2.Location = new System.Drawing.Point(166, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(957, 11);
+            this.panel2.Size = new System.Drawing.Size(949, 11);
             this.panel2.TabIndex = 6;
             // 
             // Form2
@@ -639,5 +670,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
