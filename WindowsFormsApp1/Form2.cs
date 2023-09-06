@@ -102,8 +102,10 @@ namespace WindowsFormsApp1
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
-                        "FROM policycheck ORDER BY policeBaslangic DESC " +
-                        "WHERE plaka LIKE @plakaFilter";
+                                   "FROM policycheck " +
+                                   "WHERE plaka LIKE @plakaFilter " +
+                                   "ORDER BY policeBaslangic DESC";
+
 
 
                     MySqlCommand command = new MySqlCommand(query, connection);
