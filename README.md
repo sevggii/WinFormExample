@@ -1,9 +1,8 @@
 DevExpress
 
+![image](https://github.com/sevggii/WinFormExample/assets/49620686/6df03e12-09b4-400c-9f09-35e74caa937e)
+![image](https://github.com/sevggii/WinFormExample/assets/49620686/61a745f3-2e01-485d-a2da-dcd7b67d221e)
 
-![image](https://github.com/sevgitr/WinFormExample/assets/49620686/140b8250-63b4-4439-9776-75ebf355815f)
-
-![image](https://github.com/sevggii/WinFormExample/assets/49620686/64e091a8-3955-4d45-9ca3-193c93eced46)
 
 
 
