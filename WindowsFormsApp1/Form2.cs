@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             SidePanel.Height = button1.Height;
             firstCustomControl1.BringToFront();
+            button1.BackColor = Color.FromArgb(227, 239, 255);
 
             /* this.StartPosition = FormStartPosition.CenterScreen;
              this.WindowState = FormWindowState.Normal;*/
@@ -41,6 +42,8 @@ namespace WindowsFormsApp1
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             firstCustomControl1.BringToFront();
+            button1.BackColor = Color.FromArgb(227, 239, 255);
+            button2.BackColor = Color.White;
 
         }
 
@@ -49,6 +52,8 @@ namespace WindowsFormsApp1
             SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
             secondCustomControl1.BringToFront();
+            button2.BackColor = Color.FromArgb(227, 239, 255);
+            button1.BackColor = Color.White;
 
         }
     }
