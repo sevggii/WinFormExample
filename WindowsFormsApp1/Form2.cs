@@ -27,9 +27,6 @@ namespace WindowsFormsApp1
             SidePanel.Height = button1.Height;
             firstCustomControl1.BringToFront();
             button1.BackColor = Color.FromArgb(227, 239, 255);
-
-            /* this.StartPosition = FormStartPosition.CenterScreen;
-             this.WindowState = FormWindowState.Normal;*/
         }
 
         private void Form2_Load(object sender, EventArgs e)
