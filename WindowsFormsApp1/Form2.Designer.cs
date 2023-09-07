@@ -45,8 +45,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.firstCustomControl1 = new WindowsFormsApp1.FirstCustomControl();
+            this.secondCustomControl1 = new WindowsFormsApp1.SecondCustomControl();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -207,14 +210,31 @@
             this.btnClose.TabIndex = 62;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.secondCustomControl1);
+            this.panel4.Controls.Add(this.firstCustomControl1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(208, 54);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(963, 600);
             this.panel4.TabIndex = 65;
+            // 
+            // firstCustomControl1
+            // 
+            this.firstCustomControl1.Location = new System.Drawing.Point(0, 0);
+            this.firstCustomControl1.Name = "firstCustomControl1";
+            this.firstCustomControl1.Size = new System.Drawing.Size(965, 627);
+            this.firstCustomControl1.TabIndex = 0;
+            // 
+            // secondCustomControl1
+            // 
+            this.secondCustomControl1.Location = new System.Drawing.Point(0, 0);
+            this.secondCustomControl1.Name = "secondCustomControl1";
+            this.secondCustomControl1.Size = new System.Drawing.Size(965, 621);
+            this.secondCustomControl1.TabIndex = 1;
             // 
             // Form2
             // 
@@ -243,6 +263,7 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +285,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnClose;
+        private FirstCustomControl firstCustomControl1;
+        private SecondCustomControl secondCustomControl1;
     }
 }
