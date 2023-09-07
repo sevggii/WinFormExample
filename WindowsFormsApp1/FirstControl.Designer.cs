@@ -271,7 +271,7 @@
             this.btnPlakaSorgu.Appearance.BorderColor = System.Drawing.Color.Black;
             this.btnPlakaSorgu.Appearance.Options.UseBorderColor = true;
             this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(241, 108);
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(238, 117);
             this.btnPlakaSorgu.Name = "btnPlakaSorgu";
             this.btnPlakaSorgu.Size = new System.Drawing.Size(73, 20);
             this.btnPlakaSorgu.TabIndex = 49;
@@ -279,7 +279,7 @@
             // 
             // txtPlakaSorgu
             // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(135, 108);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(132, 117);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
             this.txtPlakaSorgu.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
@@ -289,7 +289,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(73, 111);
+            this.label10.Location = new System.Drawing.Point(70, 120);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 13);
             this.label10.TabIndex = 47;
