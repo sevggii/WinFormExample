@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             advancedDataGridView1.Rows.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu FROM policycheck ORDER BY policeBaslangic DESC";
+                string query = "SELECT tcNo, DATE_FORMAT(dogumTarihi, '%d/%m/%Y') AS dogumTarihi, plaka, belgeNo, urun, DATE_FORMAT(teklifTarihi, '%d/%m/%Y') AS teklifTarihi, DATE_FORMAT(policeBaslangic, '%d/%m/%Y') AS policeBaslangic, DATE_FORMAT(policeBitis, '%d/%m/%Y') AS policeBitis, onayDurumu FROM policycheck ORDER BY policeBaslangic DESC";
 
                 MySqlCommand command = new MySqlCommand(query, connection);
 
@@ -82,7 +82,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
         private void LoadDataGridViewDataByPlaka(string plaka)
         {
             advancedDataGridView1.Rows.Clear();
@@ -91,11 +90,10 @@ namespace WindowsFormsApp1
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
-                    string query = "SELECT tcNo, dogumTarihi, plaka, belgeNo, urun, teklifTarihi, policeBaslangic, policeBitis, onayDurumu " +
+                    string query = "SELECT tcNo, DATE_FORMAT(dogumTarihi, '%d/%m/%Y') AS dogumTarihi, plaka, belgeNo, urun, DATE_FORMAT(teklifTarihi, '%d/%m/%Y') AS teklifTarihi, DATE_FORMAT(policeBaslangic, '%d/%m/%Y') AS policeBaslangic, DATE_FORMAT(policeBitis, '%d/%m/%Y') AS policeBitis, onayDurumu " +
                                    "FROM policycheck " +
                                    "WHERE plaka LIKE @plakaFilter " +
                                    "ORDER BY policeBaslangic DESC";
-
 
                     MySqlCommand command = new MySqlCommand(query, connection);
                     command.Parameters.AddWithValue("@plakaFilter", plaka + "%");
@@ -131,6 +129,8 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -373,9 +373,5 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
