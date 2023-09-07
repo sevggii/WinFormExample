@@ -302,7 +302,6 @@
             // 
             this.txtPlakaSorgu.Location = new System.Drawing.Point(125, 140);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
-            this.txtPlakaSorgu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtPlakaSorgu.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
             this.txtPlakaSorgu.TabIndex = 48;
