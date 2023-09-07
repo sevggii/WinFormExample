@@ -127,17 +127,17 @@
   <data name="neftlogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neftlogo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="contact-form (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\contact-form (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="neftlogo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\neftlogo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lookup&amp;reference_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lookup&amp;reference_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="register (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\register (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="contact-form (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contact-form (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="neftlogo (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\neftlogo (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="neftlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neftlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +148,9 @@
   <data name="contact-form (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contact-form (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="google-forms (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\google-forms (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,13 +160,19 @@
   <data name="contact-form" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contact-form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="google-forms (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google-forms (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="contact-form (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contact-form (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="neftlogo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neftlogo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="register (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\register (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="neftlogo (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neftlogo (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="register (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\register (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
