@@ -372,5 +372,10 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

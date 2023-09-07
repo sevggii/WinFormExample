@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirstCustomControl));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
             this.tcNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dogumTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,9 +90,6 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.Appearance.Options.UseBorderColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.button5);
-            this.panelControl1.Controls.Add(this.button4);
-            this.panelControl1.Controls.Add(this.button3);
             this.panelControl1.Controls.Add(this.advancedDataGridView1);
             this.panelControl1.Controls.Add(this.btnPDF);
             this.panelControl1.Controls.Add(this.cbOnay);
@@ -125,51 +119,6 @@
             this.panelControl1.Size = new System.Drawing.Size(965, 621);
             this.panelControl1.TabIndex = 1;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(850, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(29, 31);
-            this.button5.TabIndex = 59;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(883, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(29, 31);
-            this.button4.TabIndex = 58;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(918, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(29, 31);
-            this.button3.TabIndex = 57;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // advancedDataGridView1
             // 
             this.advancedDataGridView1.AllowUserToAddRows = false;
@@ -194,6 +143,7 @@
             this.policeBaslangic,
             this.policeBitis,
             this.onay});
+            this.advancedDataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.advancedDataGridView1.DateWithTime = false;
             this.advancedDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.advancedDataGridView1.Location = new System.Drawing.Point(3, 407);
@@ -285,7 +235,7 @@
             // 
             // cbOnay
             // 
-            this.cbOnay.Location = new System.Drawing.Point(768, 237);
+            this.cbOnay.Location = new System.Drawing.Point(775, 287);
             this.cbOnay.Name = "cbOnay";
             this.cbOnay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -299,7 +249,7 @@
             // 
             // cbUrun
             // 
-            this.cbUrun.Location = new System.Drawing.Point(453, 214);
+            this.cbUrun.Location = new System.Drawing.Point(460, 264);
             this.cbUrun.Name = "cbUrun";
             this.cbUrun.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -320,7 +270,7 @@
             this.btnPlakaSorgu.Appearance.BorderColor = System.Drawing.Color.Black;
             this.btnPlakaSorgu.Appearance.Options.UseBorderColor = true;
             this.btnPlakaSorgu.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.lookup_reference_16x16;
-            this.btnPlakaSorgu.Location = new System.Drawing.Point(231, 140);
+            this.btnPlakaSorgu.Location = new System.Drawing.Point(236, 166);
             this.btnPlakaSorgu.Name = "btnPlakaSorgu";
             this.btnPlakaSorgu.Size = new System.Drawing.Size(73, 20);
             this.btnPlakaSorgu.TabIndex = 49;
@@ -328,7 +278,7 @@
             // 
             // txtPlakaSorgu
             // 
-            this.txtPlakaSorgu.Location = new System.Drawing.Point(125, 140);
+            this.txtPlakaSorgu.Location = new System.Drawing.Point(130, 166);
             this.txtPlakaSorgu.Name = "txtPlakaSorgu";
             this.txtPlakaSorgu.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlakaSorgu.Size = new System.Drawing.Size(100, 20);
@@ -338,7 +288,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(63, 143);
+            this.label10.Location = new System.Drawing.Point(68, 169);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 13);
             this.label10.TabIndex = 47;
@@ -347,7 +297,7 @@
             // datePoliceBitis
             // 
             this.datePoliceBitis.EditValue = null;
-            this.datePoliceBitis.Location = new System.Drawing.Point(768, 214);
+            this.datePoliceBitis.Location = new System.Drawing.Point(775, 264);
             this.datePoliceBitis.Name = "datePoliceBitis";
             this.datePoliceBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -361,7 +311,7 @@
             // datePoliceBaslangic
             // 
             this.datePoliceBaslangic.EditValue = null;
-            this.datePoliceBaslangic.Location = new System.Drawing.Point(768, 191);
+            this.datePoliceBaslangic.Location = new System.Drawing.Point(775, 241);
             this.datePoliceBaslangic.Name = "datePoliceBaslangic";
             this.datePoliceBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -375,7 +325,7 @@
             // dateTeklifTarihi
             // 
             this.dateTeklifTarihi.EditValue = null;
-            this.dateTeklifTarihi.Location = new System.Drawing.Point(453, 237);
+            this.dateTeklifTarihi.Location = new System.Drawing.Point(460, 287);
             this.dateTeklifTarihi.Name = "dateTeklifTarihi";
             this.dateTeklifTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -388,14 +338,14 @@
             // 
             // txtBelgeNo
             // 
-            this.txtBelgeNo.Location = new System.Drawing.Point(453, 191);
+            this.txtBelgeNo.Location = new System.Drawing.Point(460, 241);
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Size = new System.Drawing.Size(100, 20);
             this.txtBelgeNo.TabIndex = 42;
             // 
             // txtPlaka
             // 
-            this.txtPlaka.Location = new System.Drawing.Point(186, 237);
+            this.txtPlaka.Location = new System.Drawing.Point(193, 287);
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPlaka.Size = new System.Drawing.Size(100, 20);
@@ -404,7 +354,7 @@
             // dateDt
             // 
             this.dateDt.EditValue = null;
-            this.dateDt.Location = new System.Drawing.Point(186, 214);
+            this.dateDt.Location = new System.Drawing.Point(193, 264);
             this.dateDt.Name = "dateDt";
             this.dateDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -417,7 +367,7 @@
             // 
             // txtTC
             // 
-            this.txtTC.Location = new System.Drawing.Point(186, 191);
+            this.txtTC.Location = new System.Drawing.Point(193, 241);
             this.txtTC.Name = "txtTC";
             this.txtTC.Properties.MaxLength = 11;
             this.txtTC.Size = new System.Drawing.Size(100, 20);
@@ -427,7 +377,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(626, 237);
+            this.label9.Location = new System.Drawing.Point(633, 287);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 13);
             this.label9.TabIndex = 38;
@@ -437,7 +387,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(626, 214);
+            this.label8.Location = new System.Drawing.Point(633, 264);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 37;
@@ -447,7 +397,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(626, 191);
+            this.label7.Location = new System.Drawing.Point(633, 241);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 13);
             this.label7.TabIndex = 36;
@@ -457,7 +407,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(357, 237);
+            this.label6.Location = new System.Drawing.Point(364, 287);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 35;
@@ -467,7 +417,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(357, 214);
+            this.label5.Location = new System.Drawing.Point(364, 264);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 34;
@@ -477,7 +427,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(357, 191);
+            this.label4.Location = new System.Drawing.Point(364, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 33;
@@ -487,7 +437,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(63, 237);
+            this.label3.Location = new System.Drawing.Point(70, 287);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 32;
@@ -497,7 +447,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(63, 214);
+            this.label2.Location = new System.Drawing.Point(70, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 31;
@@ -507,7 +457,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(63, 191);
+            this.label1.Location = new System.Drawing.Point(70, 241);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 30;
@@ -516,7 +466,7 @@
             // btnAdd
             // 
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(453, 263);
+            this.btnAdd.Location = new System.Drawing.Point(460, 313);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.btnAdd.Size = new System.Drawing.Size(100, 37);
@@ -556,9 +506,6 @@
         #endregion
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private ADGV.AdvancedDataGridView advancedDataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tcNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dogumTarihi;
