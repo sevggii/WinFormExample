@@ -440,6 +440,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Connection.cs" />
+    <Compile Include="FirstControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FirstControl.Designer.cs">
+      <DependentUpon>FirstControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,12 +454,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecondCustomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecondCustomControl.Designer.cs">
+      <DependentUpon>SecondCustomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecondCustomController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SecondCustomController.Designer.cs">
+      <DependentUpon>SecondCustomController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FirstControl.resx">
+      <DependentUpon>FirstControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +489,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SecondCustomControl.resx">
+      <DependentUpon>SecondCustomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecondCustomController.resx">
+      <DependentUpon>SecondCustomController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
