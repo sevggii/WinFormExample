@@ -227,9 +227,9 @@
             // btnPDF
             // 
             this.btnPDF.ImageOptions.Image = global::WindowsFormsApp1.Properties.Resources.printviapdf_32x32;
-            this.btnPDF.Location = new System.Drawing.Point(861, 289);
+            this.btnPDF.Location = new System.Drawing.Point(840, 289);
             this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(85, 38);
+            this.btnPDF.Size = new System.Drawing.Size(106, 38);
             this.btnPDF.TabIndex = 53;
             this.btnPDF.Text = "PDF AL";
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);

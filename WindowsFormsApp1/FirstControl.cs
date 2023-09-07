@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
             advancedDataGridView1.Rows.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                string query = "SELECT tcNo, DATE_FORMAT(dogumTarihi, '%d/%m/%Y') AS dogumTarihi, plaka, belgeNo, urun, DATE_FORMAT(teklifTarihi, '%d/%m/%Y') AS teklifTarihi, DATE_FORMAT(policeBaslangic, '%d/%m/%Y') AS policeBaslangic, DATE_FORMAT(policeBitis, '%d/%m/%Y') AS policeBitis, onayDurumu FROM policycheck ORDER BY policeBaslangic DESC";
+                string query = "SELECT tcNo, DATE_FORMAT(dogumTarihi, '%d/%m/%Y') AS dogumTarihi, plaka, belgeNo, urun, DATE_FORMAT(teklifTarihi, '%d/%m/%Y') AS teklifTarihi, DATE_FORMAT(policeBaslangic, '%d/%m/%Y') AS policeBaslangic, DATE_FORMAT(policeBitis, '%d/%m/%Y') AS policeBitis, onayDurumu FROM policycheck";
 
                 MySqlCommand command = new MySqlCommand(query, connection);
 
@@ -56,20 +56,32 @@ namespace WindowsFormsApp1
                     connection.Open();
                     MySqlDataReader reader = command.ExecuteReader();
 
+                    var data = new List<object[]>();
+
                     while (reader.Read())
                     {
+                        var rowData = new object[]
+                        {
+                            reader["tcNo"],
+                            reader["dogumTarihi"],
+                            reader["plaka"],
+                            reader["belgeNo"],
+                            reader["urun"],
+                            reader["teklifTarihi"],
+                            reader["policeBaslangic"],
+                            reader["policeBitis"],
+                            reader["onayDurumu"]
+                        };
+                        data.Add(rowData);
+                    }
+
+                    // Sort the data by policeBaslangic in descending order
+                    data = data.OrderByDescending(row => Convert.ToDateTime(row[6])).ToList();
+
+                    foreach (var rowData in data)
+                    {
                         DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(advancedDataGridView1,
-                              reader["tcNo"],
-                              reader["dogumTarihi"],
-                              reader["plaka"],
-                              reader["belgeNo"],
-                              reader["urun"],
-                              reader["teklifTarihi"],
-                              reader["policeBaslangic"],
-                              reader["policeBitis"],
-                              reader["onayDurumu"]
-                          );
+                        row.CreateCells(advancedDataGridView1, rowData);
                         advancedDataGridView1.Rows.Add(row);
                     }
 
@@ -81,6 +93,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
 
         private void LoadDataGridViewDataByPlaka(string plaka)
         {
