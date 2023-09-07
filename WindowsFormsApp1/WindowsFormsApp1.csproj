@@ -486,6 +486,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\neftlogo %281%29 %281%29.png" />
     <Content Include="images\neftlogo.ico" />
     <Content Include="images\neftlogo.png" />
     <Content Include="images\query_icon_216695.ico" />

@@ -128,7 +128,7 @@
             this.panelControl1.Controls.Add(this.btnAdd);
             this.panelControl1.Location = new System.Drawing.Point(208, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(959, 397);
+            this.panelControl1.Size = new System.Drawing.Size(934, 397);
             this.panelControl1.TabIndex = 0;
             // 
             // advancedDataGridView1
@@ -159,7 +159,7 @@
             this.advancedDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.advancedDataGridView1.Location = new System.Drawing.Point(0, 304);
             this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.Size = new System.Drawing.Size(959, 198);
+            this.advancedDataGridView1.Size = new System.Drawing.Size(934, 198);
             this.advancedDataGridView1.TabIndex = 55;
             this.advancedDataGridView1.TimeFilter = false;
             this.advancedDataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.advancedDataGridView1_CellFormatting);
@@ -606,6 +606,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Form2.IconOptions.Image")));
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Form2.IconOptions.LargeImage")));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
