@@ -94,7 +94,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
         private void LoadDataGridViewDataByPlaka(string plaka)
         {
             advancedDataGridView1.Rows.Clear();
@@ -142,8 +141,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
-
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -309,7 +306,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
         private void advancedDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
 
@@ -385,6 +381,59 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
+
+        private void advancedDataGridView1_FilterStringChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void advancedDataGridView1_SortStringChanged(object sender, EventArgs e)
+        {
+            advancedDataGridView1.Rows.Clear();
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                // Son 15 gün içindeki kayıtları getir ve en yeni tarihten en eskiye doğru sırala
+                string query = "SELECT tcNo, DATE_FORMAT(dogumTarihi, '%d/%m/%Y') AS dogumTarihi, plaka, belgeNo, urun, DATE_FORMAT(teklifTarihi, '%d/%m/%Y') AS teklifTarihi, DATE_FORMAT(policeBaslangic, '%d/%m/%Y') AS policeBaslangic, DATE_FORMAT(policeBitis, '%d/%m/%Y') AS policeBitis, onayDurumu " +
+                               "FROM policycheck " +
+                               "WHERE policeBaslangic >= DATE_SUB(NOW(), INTERVAL 15 DAY) " +
+                               "ORDER BY policeBaslangic DESC";
+
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        var rowData = new object[]
+                        {
+                    reader["tcNo"],
+                    reader["dogumTarihi"],
+                    reader["plaka"],
+                    reader["belgeNo"],
+                    reader["urun"],
+                    reader["teklifTarihi"],
+                    reader["policeBaslangic"],
+                    reader["policeBitis"],
+                    reader["onayDurumu"]
+                        };
+
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(advancedDataGridView1, rowData);
+                        advancedDataGridView1.Rows.Add(row);
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
 
     }
 }
