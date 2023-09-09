@@ -364,7 +364,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 333);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(959, 232);
+            this.dataGridView1.Size = new System.Drawing.Size(959, 246);
             this.dataGridView1.TabIndex = 56;
             // 
             // tcNo
@@ -444,12 +444,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbFilter.Properties.Items.AddRange(new object[] {
             "Hepsi",
-            "Son 15 gün",
-            "Son 30 gün",
-            "Son 45 gün"});
+            "Son 15 Gün",
+            "Son 30 Gün",
+            "Son 45 Gün"});
             this.cbFilter.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbFilter.Size = new System.Drawing.Size(100, 20);
             this.cbFilter.TabIndex = 57;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // label11
             // 

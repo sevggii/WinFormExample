@@ -95,6 +95,53 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void LoadDataGridViewDataByDate(int days)
+        {
+            dataGridView1.Rows.Clear();
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                string query = "SELECT tcNo, DATE_FORMAT(dogumTarihi, '%d/%m/%Y') AS dogumTarihi, plaka, belgeNo, urun, DATE_FORMAT(teklifTarihi, '%d/%m/%Y') AS teklifTarihi, DATE_FORMAT(policeBaslangic, '%d/%m/%Y') AS policeBaslangic, DATE_FORMAT(policeBitis, '%d/%m/%Y') AS policeBitis, onayDurumu " +
+                               "FROM policycheck " +
+                               $"WHERE policeBaslangic >= DATE_SUB(NOW(), INTERVAL {days} DAY) " +
+                               "ORDER BY policeBaslangic DESC";
+
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        var rowData = new object[]
+                        {
+                    reader["tcNo"],
+                    reader["dogumTarihi"],
+                    reader["plaka"],
+                    reader["belgeNo"],
+                    reader["urun"],
+                    reader["teklifTarihi"],
+                    reader["policeBaslangic"],
+                    reader["policeBitis"],
+                    reader["onayDurumu"]
+                        };
+
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.CreateCells(dataGridView1, rowData);
+                        dataGridView1.Rows.Add(row);
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+
         private void LoadDataGridViewDataByPlaka(string plaka)
         {
             dataGridView1.Rows.Clear();
@@ -372,23 +419,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void txtBelgeNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Accept only numbers and control keys (backspace, delete, etc.)
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;// Reject keystroke
-            }
-        }
-
-        private void txtTC_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void advancedDataGridView1_FilterStringChanged(object sender, EventArgs e)
         {
 
@@ -438,6 +468,28 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
+            }
+        }
+
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedFilter = cbFilter.SelectedItem?.ToString();
+
+            if (selectedFilter == "Son 15 Gün")
+            {
+                LoadDataGridViewDataByDate(15);
+            }
+            else if (selectedFilter == "Son 30 Gün")
+            {
+                LoadDataGridViewDataByDate(30);
+            }
+            else if (selectedFilter == "Son 45 Gün")
+            {
+                LoadDataGridViewDataByDate(45);
+            }
+            else
+            {
+                LoadDataGridViewData();
             }
         }
     }
