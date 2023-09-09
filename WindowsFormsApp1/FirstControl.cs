@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace WindowsFormsApp1
 {
@@ -44,7 +45,7 @@ namespace WindowsFormsApp1
 
         private void LoadDataGridViewData()
         {
-            advancedDataGridView1.Rows.Clear();
+            dataGridView1.Rows.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 string query = "SELECT tcNo, DATE_FORMAT(dogumTarihi, '%d/%m/%Y') AS dogumTarihi, plaka, belgeNo, urun, DATE_FORMAT(teklifTarihi, '%d/%m/%Y') AS teklifTarihi, DATE_FORMAT(policeBaslangic, '%d/%m/%Y') AS policeBaslangic, DATE_FORMAT(policeBitis, '%d/%m/%Y') AS policeBitis, onayDurumu FROM policycheck";
@@ -81,8 +82,8 @@ namespace WindowsFormsApp1
                     foreach (var rowData in data)
                     {
                         DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(advancedDataGridView1, rowData);
-                        advancedDataGridView1.Rows.Add(row);
+                        row.CreateCells(dataGridView1, rowData);
+                        dataGridView1.Rows.Add(row);
                     }
 
                     reader.Close();
@@ -96,7 +97,7 @@ namespace WindowsFormsApp1
 
         private void LoadDataGridViewDataByPlaka(string plaka)
         {
-            advancedDataGridView1.Rows.Clear();
+            dataGridView1.Rows.Clear();
 
             if (plaka.Length > 0)
             {
@@ -118,7 +119,7 @@ namespace WindowsFormsApp1
                         while (reader.Read())
                         {
                             DataGridViewRow row = new DataGridViewRow();
-                            row.CreateCells(advancedDataGridView1,
+                            row.CreateCells(dataGridView1,
                                 reader["tcNo"],
                                 reader["dogumTarihi"],
                                 reader["plaka"],
@@ -129,7 +130,7 @@ namespace WindowsFormsApp1
                                 reader["policeBitis"],
                                 reader["onayDurumu"]
                             );
-                            advancedDataGridView1.Rows.Add(row);
+                            dataGridView1.Rows.Add(row);
                         }
 
                         reader.Close();
@@ -150,14 +151,19 @@ namespace WindowsFormsApp1
             {
                 connection.Open();
 
+                DateTime dogumTarihi_ = DateTime.ParseExact(dateDt.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                DateTime teklifTarihi_ = DateTime.ParseExact(dateDt.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                DateTime policeBaslangic_ = DateTime.ParseExact(dateDt.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                DateTime policeBitis_ = DateTime.ParseExact(dateDt.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+
                 string tcNo = txtTC.Text;
-                string dogumTarihi = dateDt.Text;
+                string dogumTarihi = dogumTarihi_.ToString("yyyy-MM-dd");
                 string plaka = txtPlaka.Text;
                 string belgeNo = txtBelgeNo.Text;
                 string urun = cbUrun.SelectedItem?.ToString();
-                string teklifTarihi = dateTeklifTarihi.Text;
-                string policeBaslangic = datePoliceBaslangic.Text;
-                string policeBitis = datePoliceBitis.Text;
+                string teklifTarihi = teklifTarihi_.ToString("yyyy-MM-dd");
+                string policeBaslangic = policeBaslangic_.ToString("yyyy-MM-dd");
+                string policeBitis = policeBitis_.ToString("yyyy-MM-dd");
                 string onayDurumu = cbOnay.SelectedItem?.ToString();
 
                 string query = "INSERT INTO policycheck (tcNo, dogumTarihi,plaka,belgeNo,urun,teklifTarihi,policeBaslangic,policeBitis,onayDurumu) " +
@@ -179,7 +185,7 @@ namespace WindowsFormsApp1
 
                 MessageBox.Show("Veri Başarıyla Eklendi!");
 
-                advancedDataGridView1.Rows.Clear();
+                dataGridView1.Rows.Clear();
                 LoadDataGridViewData();
             }
             catch (Exception ex)
@@ -191,6 +197,7 @@ namespace WindowsFormsApp1
                 connection.Close();
             }
         }
+
 
         private void txtPlakaSorgu_TextChanged(object sender, EventArgs e)
         {
@@ -208,7 +215,7 @@ namespace WindowsFormsApp1
 
         private void btnPDF_Click(object sender, EventArgs e)
         {
-            if (advancedDataGridView1.Rows.Count > 0)
+            if (dataGridView1.Rows.Count > 0)
             {
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "PDF (*.pdf)|*.pdf";
@@ -228,7 +235,7 @@ namespace WindowsFormsApp1
 
                             document.Open();
 
-                            PdfPTable pTable = new PdfPTable(advancedDataGridView1.Columns.Count);
+                            PdfPTable pTable = new PdfPTable(dataGridView1.Columns.Count);
                             pTable.WidthPercentage = 100;
                             pTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
@@ -240,7 +247,7 @@ namespace WindowsFormsApp1
                             pTable.SpacingBefore = 10f;
                             pTable.SpacingAfter = 10f;
 
-                            foreach (DataGridViewColumn col in advancedDataGridView1.Columns)
+                            foreach (DataGridViewColumn col in dataGridView1.Columns)
                             {
                                 PdfPCell pCell = new PdfPCell(new Phrase(col.HeaderText, font));
                                 pCell.HorizontalAlignment = Element.ALIGN_LEFT;
@@ -251,7 +258,7 @@ namespace WindowsFormsApp1
                                 pTable.AddCell(pCell);
                             }
 
-                            foreach (DataGridViewRow viewRow in advancedDataGridView1.Rows)
+                            foreach (DataGridViewRow viewRow in dataGridView1.Rows)
                             {
                                 foreach (DataGridViewCell dcell in viewRow.Cells)
                                 {
@@ -279,8 +286,8 @@ namespace WindowsFormsApp1
                                 }
                             }
 
-                            float[] widths = new float[advancedDataGridView1.Columns.Count];
-                            for (int i = 0; i < advancedDataGridView1.Columns.Count; i++)
+                            float[] widths = new float[dataGridView1.Columns.Count];
+                            for (int i = 0; i < dataGridView1.Columns.Count; i++)
                             {
                                 widths[i] = 2f;
                             }
@@ -389,7 +396,7 @@ namespace WindowsFormsApp1
 
         private void advancedDataGridView1_SortStringChanged(object sender, EventArgs e)
         {
-            advancedDataGridView1.Rows.Clear();
+            dataGridView1.Rows.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 // Son 15 gün içindeki kayıtları getir ve en yeni tarihten en eskiye doğru sırala
@@ -421,8 +428,8 @@ namespace WindowsFormsApp1
                         };
 
                         DataGridViewRow row = new DataGridViewRow();
-                        row.CreateCells(advancedDataGridView1, rowData);
-                        advancedDataGridView1.Rows.Add(row);
+                        row.CreateCells(dataGridView1, rowData);
+                        dataGridView1.Rows.Add(row);
                     }
 
                     reader.Close();
@@ -433,7 +440,5 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
-
     }
 }
